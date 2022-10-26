@@ -1,0 +1,12 @@
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    background-color: #00323B;
+    color: white;
+    border: 0px;
+}

@@ -1,6 +1,5 @@
 import React, { createContext } from "react";
 import usePersistedState from "../hooks/use-persisted.hook";
-import {callType, dispositions, resources, blockReasons, resourceDelivery } from "../assets/data";
 export const CallFormContext = createContext(null);
 
 export const CallFormProvider = ({children}) => {

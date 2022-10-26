@@ -1,4 +1,4 @@
-export const callType = [
+export const callTypes = [
     {
         id: 1,
         type: "Emotional Needs/Mental Health"

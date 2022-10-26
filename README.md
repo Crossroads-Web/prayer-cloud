@@ -23,3 +23,9 @@ The Folder contains custom hooks created to make life easier, eg use-fetch to be
 
  # styles
  conatains all the scss and css style files 
+
+
+
+ # installed node_modules packages
+ styled-components
+ react-bootstrap
