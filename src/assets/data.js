@@ -192,14 +192,22 @@ export const resources = [
 export const blockReasons = [
     {
         id: 1,
-        reason: "Repeated calls"
+        delay: 0,
+        reason: "Select a Reason"
     },
     {
         id: 2,
-        reason: "Pranks, Jokes, Time waster, Harmless"
+        delay: "24",
+        reason: "Repeated calls"
     },
     {
         id: 3,
+        delay: "48",
+        reason: "Pranks, Jokes, Time waster, Harmless"
+    },
+    {
+        id: 4,
+        delay: "00",
         reason: "Sexual, Abusive, Destructive"
     }
 ]
@@ -211,6 +219,6 @@ export const resourceDelivery = [
     },
     {
         id: 2,
-        via: "SMS(text message)"
+        via: "SMS (text message)"
     }
 ]

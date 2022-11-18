@@ -1,8 +1,8 @@
 
 h1, h2, h3 {
     text-align: center;
+    font-family: 'Recoleta', sans-serif;
 }
-
 .btn:focus,
 .btn:active,
 .btn.active {
