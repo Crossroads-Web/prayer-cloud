@@ -1,0 +1,100 @@
+table, tr {
+    width: 100% !important;
+}
+
+.quicksearch{
+    border: 1px solid #EC3310 ;
+}
+
+#popularSearch{
+    border: 1px solid #2DB3C0 ;
+    color: #2DB3C0;
+}
+#popularSearch:hover{
+    background-color: #B3E1E8;
+}
+#popularSearch:visited{
+    color: white !important;
+}
+#everything{
+    border: 1px solid #EC3310 ;
+    color: #EC3310;
+}
+#everything:hover{
+    background-color: #EAC3B9 ;
+}
+#otherSearch{
+    border: 1px solid #828282;
+    color: #494949;
+}
+#otherSearch:hover{
+    border: 1px solid #ADCFD4;
+    background-color: #D9EEF0;
+    color: #6B6B6B;
+}
+
+#otherSearch:active{
+    border: 1px solid #ADCFD4;
+    background-color: #00323B !important; 
+    color: white;
+}
+
+.filter-bar label { margin-right: 0.5em; }
+[id='content_table'] td { vertical-align: middle; }
+
+.clickable { cursor: pointer; }
+.txt-pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+.table-striped tbody tr:nth-of-type(odd) { background-color: #f1f3f5 }
+.table-hover tbody tr:hover { background-color: #e7ebee; }
+
+/* Hide redundant default search */
+[id="content_table_length"],
+[id="content_table_filter"] { display: none; }
+
+#content_table_info{
+    text-align: center;
+    display: block ;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+}
+#content_table_paginate .current{
+    color: #EC3310 !important;
+    background: none !important;
+    border: 0 !important;
+}
+#content_table_paginate .current :hover{
+    color: #EC3310 !important;
+    background: none !important;
+    border: 0 !important;
+}
+#content_table_previous{
+    float: left;
+    color: #106271 !important;
+}
+#content_table_next{
+    float: right;
+    color: #106271 !important;
+}
+#content_table_paginate{
+    text-align: center;
+    font-weight: 700;
+    color: #106271 !important;
+    display: block;
+}
+
+#content_table_paginate :hover{
+    font-size: 1.2em;
+    color: #106271 !important;
+    background: none !important;
+    border: 0 !important;
+}
+
+#content_table_wrapper{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,7 +1,9 @@
 
-h1, h2, h3 {
-    text-align: center;
-    font-family: 'Recoleta', sans-serif;
+h3, h6{
+    font-weight: 600 !important;
+}
+h6{
+    letter-spacing: 0.2em;
 }
 .btn:focus,
 .btn:active,
@@ -10,3 +12,23 @@ h1, h2, h3 {
     color: white;
     border: 0px;
 }
+
+input[type=text], input[type=email], textarea, select{
+    border: 1px solid black !important; 
+}
+.row-date {
+    width: 15%;
+  }
+  .row-type {
+    width: 20%;
+  }
+  .row-disposition {
+    width: 20%;
+  }
+  .row-location {
+    width: 15%;
+  }
+  .row-notes {
+    width: 30%;
+  }
+  
