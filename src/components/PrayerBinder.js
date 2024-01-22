@@ -2,12 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Accordion from 'react-bootstrap/Accordion';
+import { IoIosChatbubbles } from "react-icons/io";
+
 import "../styles/PrayerBinder.css";
 
 const PrayerBinder = () => {
 
   return (
-    <Wrapper className='prayer-binder'>
+    <Wrapper className='row mt-5 mb-5 prayer-binder'>
         <Header className='p-2 mt-4 mb-3'>Prayer Binder & Support</Header>
 
         <Lead className="jumbotron mb-5">
@@ -17,63 +19,51 @@ const PrayerBinder = () => {
         <h2 className='text-center mb-3'>Common Questions / Issues</h2>
         <Accordion className='accordion-flush p-4'>
             <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="0">
-                <Accordion.Header>GETTING HELP & SUPPORT</Accordion.Header>
+                <Accordion.Header>TECHNICAL SUPPORT</Accordion.Header>
                 <Accordion.Body>
-                <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>SOFTWARE ISSUES</th>
-                                <th>HARDWARE ISSUES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>DEPARTMENT</td>
-                                <td>Prayer Centre Tech Admin Josh Hozjan</td>
-                                <td>Crossroads IT Department</td>
-                            </tr>
-                            <tr>
-                                <td>SLACK</td>
-                                <td>#prayer-partners</td>
-                                <td>#itsupport</td>
-                            </tr>
-                            <tr>
-                                <td>ONLINE HELP</td>
-                                <td>jhozjan@crossroads.ca</td>
-                                <td>IT Help Desk</td>
-                            </tr>
-                        </tbody>
-                </table>
+                    <p>For immediate help, please contact your Team Leader on the Chat feature e.g (<IoIosChatbubbles/>)</p>
+                    <p>Otherwise, please book an appointment on our booking page link below.  
+                        Please choose "Technical Support" 
+                        <a target="_blank" href="https://outlook.office365.com/owa/calendar/CrossroadsPrayerCentre@ctsccc.onmicrosoft.com/bookings/" style={{color: "#178B96"}}>  https://outlook.office365.com/owa/calendar/CrossroadsPrayerCentre@ctsccc.onmicrosoft.com/bookings/ </a></p>
                 </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="1">
+            {/* <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="1">
                 <Accordion.Header>WHAT HAPPENED TO CCA 2.0?</Accordion.Header>
                 <Accordion.Body>
                     <p>Much was promised, little was delivered. So, we had the brain trust whip us up a new one. Neat eh?</p>
                 </Accordion.Body>
-            </Accordion.Item>
+            </Accordion.Item> */}
 
             <h3 className='text-center mt-5 mb-3'>Prayer Binder Topics</h3>
 
             <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="2">
                 <Accordion.Header>1A - INTRODUCTION</Accordion.Header>
                 <Accordion.Body>
-                    <p>Thank you so much for becoming a part of our ministry team. Please let us know that you have received this binder,
+                    {/* <p>Thank you so much for becoming a part of our ministry team. Please let us know that you have received this binder,
                         so that we can set up an appointment to go over the information; unless you have already done this step. 
-                    </p>
-                    
+                    </p> */}
                     <p>
-                    Enclosed, you will find our Resource Binder and ministry forms <Redish>(to be filled out while on the prayer lines)</Redish>.  
-                    Please note below, a brief description of the forms which should be scanned and emailed to <a href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a>
-                    after your shift. This enables us to follow-up with our callers; providing necessary resources and assistance.
+                    Thank you so much for becoming a part of our ministry team.  We believe that the Lord has led you to Crossroads Christian Communications to minister to Him and others through prayer.  
+                    We are so excited about this new adventure that the Lord has begun in your life!  Many of our volunteers have commented that they have grown in their prayer life as they pray for others.
+                    Some of our prayer partner volunteers have served the Lord and His people for decades in this ministry!!!  Only Heaven knows the impact they have made over the years.  
+                    Countless souls have been saved and strengthened in faith!!  Praise God for His gracious gift of salvation!!!
                     </p>
 
                     <p>
-                        <strong>Binder:</strong> This is information that you can use while taking calls. Included in this binder are resource suggestions,
-                        brochures to offer to our callers, model prayers <Redish>(you may find these helpful as prayer prompters)</Redish>, as well as important guidelines to consider when leading someone to the Lord, etc.
+                        Our A1P <Redish>(AnyonePray)</Redish> Call Centre platform <Redish>(the prayer lines)</Redish> features a Resource Binder and ministry call forms <Redish>(to be filled out online while you are taking calls on the prayer lines)</Redish>.
+                        Once completed, these forms will be sent directly to the Prayer Centre Administrative staff.  Please note a brief description of the forms below.
+                        This enables us to follow-up with our callers; providing necessary resources and assistance.
                     </p>
+
+                    <p>
+                        <strong>Resource Binder:</strong> This is information that you can use while taking calls. Included in this online binder are resource suggestions, brochures to offer to our callers, model prayers 
+                        <Redish> (you may find these helpful as prayer prompters)</Redish>, as well as important guidelines to consider when leading someone to the Lord, etc.
+                        
+                    </p>
+                        <ul>
+                            <li><strong>We encourage you to review this on a regular basis, as even a few minutes before your shift will help you keep important information in mind.</strong></li>
+                        </ul>
 
                     <p>
                         <strong>Prayer Form:</strong> This is the form that you will use while speaking to callers. Each box represents a prayer call.
@@ -84,45 +74,61 @@ const PrayerBinder = () => {
                     </p>
 
                     <p>
-                        <strong>Ministry Response Form:</strong> This is for ministry follow-up and will also be returned to our office. Please write the caller’s complete contact details
-                         in the <Blueish><strong>Caller Information section</strong></Blueish>.  Repeat this information back to the caller carefully.  <Blueish>Please be very cautious if asking for information from a minor.  
+                        <strong>Call/Ministry Response Form: </strong> 
+                        This is the form that you will use while speaking to callers. The first section has caller information that you will want to complete,
+                        should the caller request resources. Please repeat this information back to the caller carefully. It must be completed in full if they request <Blueish>Physical Resources</Blueish> by mail. 
+                        <Blueish> Please be very cautious if asking for information from a minor.  
                         They must have permission from a parent/adult caregiver. If unsure, take down the information, but please make sure that you note that the caller is a minor on the form.</Blueish>
                     </p>
 
                     <p>
-                        Below the Caller information section (starting with ‘Salvation’) are the categories that we designate for ministry follow-up.  Please checkmark the correct category.
+                        <strong>If the caller only wants a prayer</strong>, simply just fill in their first name <Redish>(and last name if they provide it)</Redish>.  You may want to add other information such as a city name and state/province for our records as well.  We encourage you to take as much information as possible if the caller is comfortable with this. 
                     </p>
 
                     <p>
-                         Please also ask the caller if they need a New Testament or booklets/brochures for encouragement.  Checkmark these clearly for the follow-up ministry team.
+                        The second section is labelled <strong>Call Type</strong>.  Please checkmark as many of the categories that apply to the caller’s prayer requests. This section must have at least one box checked off.
+                           Below this section, you will see <strong>Call Notes</strong>.  We encourage you to write the main prayer points <Redish>(so you remember details for prayer)</Redish>, or a summary of the call for the pastoral team if follow-up is required. This helps our pastoral team to prepare adequately for the call.  
                     </p>
 
                     <p>
-                        <strong>Salvation/Rededication –</strong> Individuals who give or rededicate their lives to the Lord will receive an encouraging phone call from our <Blueish>Ministry Follow-up Representatives</Blueish>
-                         generally within a week.  Another call will be made in 6-8 weeks after the initial call to see how they are progressing.  We also encourage the caller to provide their complete contact
-                        information, so that we can send specific letters/emails with brochures or resources; according to their specific needs.  We call the letters the Salvation Series.
+                    The fourth section of the form is <strong>Follow-Up Information</strong>.  The first step is to choose a <strong>Disposition</strong> by pressing down the drop-down arrow in the box, for e.g., <i>“Prayer Call”</i> or you may want to choose
+                    <Redish> “Pastoral Call – FOLLOWUP” (if pastoral follow-up or resources are required)</Redish>, etc.  You will notice that underneath the <strong>Disposition</strong> box is a slider beside the words, <i>“Send Resources”</i>.  For the Crossroads-approved resource lists to be shown, you will need to click on that slider, so that it lights up!
                     </p>
 
                     <p>
-                        <strong>Pastoral Callbacks –</strong> There are many callers who will want to speak to the pastoral care team.  As we are a 24/7/365 prayer line, our follow-up pastors cannot possibly handle the volume of callers who require counselling or who may just want to talk.  We can offer some options to these callers:
+                        Please click on the appropriate resources and designate how these will be sent e.g.text or SMS/email/Physical Resources 
+                        <Redish> (sent out by “snail mail”)</Redish>. We also encourage you to note if you offered a resource to the caller such as our website, a book suggestion, etc. 
+                        under the <strong>Call Notes</strong>. <Redish>Please note that we offer all resources as <u>suggestions only</u></Redish>. 
                     </p>
 
+                    <p>
+                        <strong>Important</strong>:  Please also ask the caller if they need a <strong>New Testament</strong> or booklets for encouragement. Checkmark or note these clearly for the follow-up ministry team.
+                    </p>
+
+                    <p>
+                        <strong>Salvation/Rededication Calls</strong> – Individuals who give or rededicate their lives to the Lord will receive an encouraging phone call from our <strong><i>Ministry Follow-up Team</i></strong> generally within a week.
+                          Another call will be made in 6-8 weeks after the initial call to see how they are progressing.  We also encourage the caller to provide their complete contact information, so that we can send specific letters/emails with brochures or resources, according to their specific needs.  We call the letters the Salvation Series. 
+                    </p>
+
+                    <p>
+                        <strong>Pastoral Callbacks</strong> – There are many callers who will want to speak to the pastoral care team. As we are a 24/7/365 prayer line, our follow-up pastors cannot possibly handle the volume of callers who require counselling or who may just want to talk. 
+                        We can offer some options to these callers: 
+                    </p>
                     <ul>
                         <li><Blueish>To contact their <Redish>local church </Redish> for counselling/pastoral care</Blueish></li>
                         <li><Blueish>Offer <Redish>counselling connections/other resources</Redish> on the Resources page in section 3 of this binder</Blueish></li>
-                        <li><Blueish>Encourage them to connect with our <Redish>Walk of Faith email mentoring program</Redish> for spiritual care.</Blueish></li>
+                        <li><Blueish>Encourage them to connect with our <Redish>Walk of Faith </Redish>email mentoring program for spiritual care.</Blueish></li>
                         <li><Blueish>You may also remind the caller that they may call our prayer lines once a day, if needed, as
-                             <Redish>prayer partners are always available to pray for them.</Redish></Blueish></li>
+                             <Redish> prayer partners are always available to pray for them.</Redish></Blueish></li>
                     </ul>
 
                     <p>
-                        <strong>Suicide Form:</strong> This form is to be used for <Redish><strong>emergencies only</strong></Redish>. It is utilized as a report for the police.
+                        <strong>Suicide Form:</strong> This online form is to be used for <Redish><strong>emergencies only</strong></Redish>. It is utilized as a report for the police.
                         These types of calls are rare as many callers may feel suicidal <Redish>(fighting suicidal thoughts)</Redish>; yet are not truly in the process of having a concrete plan to take their lives.  The four key questions on the form will help you make a clearer assessment.  Most of these callers are often individuals who are distressed and seeking encouragement from a compassionate person.  A prayer that invites them to an encounter with our Saviour who cares for them very much, is powerful.
                     </p>
 
                     <p>
-                        Once you have submitted these forms to our office (<a href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a>) and have been on the prayer lines for a month or so,
-                        we ask you to shred any forms you have used, for security purposes.
+                        Please check over the information on this online form for any errors, and then submit it to our office by pressing the orange banner labelled: <strong>Prayed! Log Call</strong>.  It is that easy!!!  You are then ready to take the next call!!
                     </p>
 
                     <p>
@@ -130,8 +136,11 @@ const PrayerBinder = () => {
                     </p>
 
                     <p>
-                        At any time, you may contact us for assistance or with questions. We would love to speak with you.  Also, after office hours, we have a Team/Shift Leader that is available to support you.
-                        <Redish><strong>Please call 905-332-6400; extension 2373</strong></Redish>. This phone is checked regularly for voicemails. You may also reach the Team/Shift Leader on the Thrio Contact Centre Company Directory.   All contact information can be found in your binder in Section 2.
+                        At any time, you may contact us for assistance or with questions. We would love to speak with you. 
+                        All contact information is included on the online Resource Binder <Blueish>(in section 2, labelled “Crossroads Contact Information”)</Blueish>. 
+                         You may also immediately reach the Team/Shift Leader on the <strong>A1P Call Centre Platform through the chat function </strong>
+                         (the voice, video and text app – indicated by “speech bubble” symbols on the left side of your screen) that you will use while on the Prayer Lines.  Also, after office hours, we have a Team/Shift Leader that is available to support you if you prefer to call by telephone.   
+                        <Redish> <strong>Please call 905-332-6400; extension 2373</strong></Redish>. This phone is checked regularly for voicemails.
                     </p>
 
                     <p>
@@ -180,7 +189,7 @@ const PrayerBinder = () => {
                                 </li>
                                 <li>
                                 These are usually found in the front or back of your Desktop computer, or along the sides of your laptop.  
-                                <Redish>(Remember to be gentle with the wires as newer technology uses less robust materials!)</Redish>
+                                <Redish> (Remember to be gentle with the wires as newer technology uses less robust materials!)</Redish>
                                 </li>
                             </ul>
                         </li>
@@ -200,7 +209,7 @@ const PrayerBinder = () => {
                                      </ul>
                                 </li>
                                 <li>
-                                    When you log into the Prayer Centre website <a href="https://thriocc.tc3.telus.com/lioncc/" style={{color: "#178B96"}}> (https://thriocc.tc3.telus.com/lioncc/)</a> on the Google Chrome web browser,
+                                    When you log into the Prayer Centre website <a target="_blank" href="https://anyonepray.com/" style={{color: "#178B96"}}> (https://anyonepray.com/)</a> on the Google Chrome web browser, click the login in button on the top right, 
                                     the website will ask for permission to use your headset and microphone.
                                 </li>
                                 <li>
@@ -239,7 +248,7 @@ const PrayerBinder = () => {
                                 <li>
                                     When you are logged into the <Redish>Prayer Centre web-page,</Redish> look closely to the top of the page where it has buttons and symbols
                                     that look like an arrow pointing to the right and left (click to go back button/click to go forward button),
-                                    as well as the reload page button (an arrow in a circle) and the webpage address bar itself<a href="https://thriocc.tc3.telus.com/lioncc/" style={{color: "#178B96"}} >(https://thriocc.tc3.telus.com/lioncc/)</a>
+                                    as well as the reload page button (an arrow in a circle) and the webpage address bar itself
 
                                     <ul>
                                         <li>
@@ -260,7 +269,7 @@ const PrayerBinder = () => {
                                             <ul>
                                                 <li>
                                                     Beside the selections you want, will be a small selection tab that either says 
-                                                    <Redish>“ALLOW / ASK / BLOCK / (automatic)"</Redish>
+                                                    <Redish> “ALLOW / ASK / BLOCK / (automatic)"</Redish>
                                                 </li>
                                                 <li>
                                                     for the Microphone selection, make sure it designates: <Redish>ALLOW</Redish>
@@ -352,33 +361,31 @@ const PrayerBinder = () => {
                     </ul>
 
                     <p>
-                    <strong>Crossroads Website:</strong> <a href="https://www.crossroads.ca" style={{color: "#EC3310"}}>www.crossroads.ca</a>
+                    <strong>Crossroads Website:</strong> <a target="_blank" href="https://www.crossroads.ca" style={{color: "#EC3310"}}>www.crossroads.ca</a>
                     </p>
 
                     <p>
-                        <strong> Crossroads Resources:</strong> <a href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>; 
-                        <a href="https://www.intothecastle.com" style={{color: "#178B96"}}>www.intothecastle.com</a>;
-                        <a href="https://www.yestv.com" style={{color: "#178B96"}}>www.yestv.com</a>
+                        <strong> Crossroads Resources:</strong> <a target="_blank" href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>; <a target="_blank" href="https://www.intothecastle.com" style={{color: "#178B96"}}>www.intothecastle.com</a>; <a target="_blank" href="https://www.yestv.com" style={{color: "#178B96"}}>www.yestv.com</a>
                     </p>
 
                     <p>
-                        <strong>Crossroads Email Address for PRAYER Requests:</strong> <a href="mailto:prayer@crossroads.ca" style={{color: "#EC3310"}}>prayer@crossroads.ca</a>
+                        <strong>Crossroads Email Address for PRAYER Requests:</strong> <a target="_blank" href="mailto:prayer@crossroads.ca" style={{color: "#EC3310"}}>prayer@crossroads.ca</a>
                     </p>
-
+                    <p><Redish>100 HUNTLEY STREET-RESOURCES/TOPIC INDEX:</Redish> <a target="_blank" href="www.100hs.ca/topic" style={{color: "#178B96"}}>www.100hs.ca/topic</a> </p>
                     <p>
                         <strong>Mailing Address:</strong>
                     </p>
 
-                        <p className='p-2'>CANADA:</p>
                         <p className='m-0'>Crossroads Christian Communications Inc.</p>
                         <p className='m-0'>PO Box 5100</p>
                         <p className='m-0'>Burlington, ON</p>
                         <p className='m-0'>L7R 4M2</p>
                     <div className='text-center'>
                         <p><strong>Crossroads Prayer Centre: <Redish>905-332-6400</Redish> (auto attendant);</strong></p>
-                        <p><strong><Blueish>Gloria Willoughby Ext. 2374</Blueish>  |  <Blueish>Volunteer Ministry Prayer Representatives Ext. 3237</Blueish>  |  <Blueish>Team Leader Ext. 2373</Blueish></strong></p>
+                        <p><strong><Blueish>Gloria Willoughby Ext. 2374: give to caller re complaints about Prayer Partners</Blueish><br/>
+                        (Let the caller know you cannot comment on the concern and give them the Manager’s extension; 2374)<br/>
+                        <Blueish>Volunteer Ministry Prayer Representatives Ext. 3237</Blueish>  |  <Blueish>Team Leader Ext. 2373</Blueish></strong></p>
                         <p><strong><Redish>Toll Free: 855-856-6868</Redish> | <Redish>Fax: 905-332-6655</Redish></strong></p>
-                        <p><strong><Blueish>Please send your statistics to: <a href="mailto:nmcstates@crossroads.ca" style={{color: "#178B96"}}>nmcstates@crossroads.ca</a></Blueish></strong></p>
                     </div>
                 </Accordion.Body>
             </Accordion.Item>
@@ -400,7 +407,7 @@ const PrayerBinder = () => {
                         <h6><Redish><strong>CANADIAN ASSOCIATION FOR SUICIDE PREVENTION</strong></Redish></h6>
                         <p>
                             (Provides link to Crisis Centres across Canada)<br/>
-                            Internet: <a href="https://www.suicideprevention.ca" style={{color: "#178B96"}}>www.suicideprevention.ca</a>
+                            Internet: <a target="_blank" href="https://www.suicideprevention.ca" style={{color: "#178B96"}}>www.suicideprevention.ca</a>
                         </p>
                         
                         <h6><Redish><strong>SUICIDE HOTLINES</strong></Redish></h6>
@@ -409,7 +416,7 @@ const PrayerBinder = () => {
 
                         <h6><Redish><strong>USA - INTERNET</strong></Redish></h6>
                         <p>
-                            <a href="https://www.suicidehotlines.com" style={{color: "#178B96"}}>www.suicidehotlines.com</a>
+                            <a target="_blank" href="https://www.suicidehotlines.com" style={{color: "#178B96"}}>www.suicidehotlines.com</a>
                         </p>
 
                         <h6><Redish><strong>CANADA/USA</strong></Redish></h6>
@@ -419,11 +426,11 @@ const PrayerBinder = () => {
                         </p>
                         
                         <p>
-                            USA - <a href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a> 
+                            USA - <a target="_blank" href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a> 
                         </p>
 
                         <p>
-                            CANADA - <a href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a> 
+                            CANADA - <a target="_blank" href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a> 
                         </p>
 
                         <p style={{textAlign: "left"}}>
@@ -450,10 +457,10 @@ const PrayerBinder = () => {
 
                                 <td>
                                     <p>
-                                        *Send suicide reports immediately to: <a href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a> <br/>
-                                        and to Jackie Crawford - <a href="mailto:njcrawford@crossroads.ca" style={{color: "#178B96"}}>jcrawford@crossroads.ca</a>;  <br/>
-                                        and Pastor Marc Rudy - <a href="mailto:mrudy@crossroads.ca" style={{color: "#178B96"}}>mrudy@crossroads.ca</a>;<br/>
-                                        and Sharon Langendoen-Arndt - <a href="mailto:sarndt@crossroads.ca" style={{color: "#178B96"}}>msarndt@crossroads.ca</a> <br/>
+                                        *Send suicide reports immediately to: <a target="_blank" href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a> <br/>
+                                        and to Jackie Crawford - <a target="_blank" href="mailto:njcrawford@crossroads.ca" style={{color: "#178B96"}}>jcrawford@crossroads.ca</a>;  <br/>
+                                        and Pastor Marc Rudy - <a target="_blank" href="mailto:mrudy@crossroads.ca" style={{color: "#178B96"}}>mrudy@crossroads.ca</a>;<br/>
+                                        and Sharon Langendoen-Arndt - <a target="_blank" href="mailto:sarndt@crossroads.ca" style={{color: "#178B96"}}>msarndt@crossroads.ca</a> <br/>
                                         <Redish>*Send to all 4 addresses please, to ensure it will be cared for!</Redish>
                                     </p>
                                 </td>
@@ -461,9 +468,9 @@ const PrayerBinder = () => {
                             <tr>
                                 <td>
                                     <p>
-                                        <strong>SUICIDAL CALLERS </strong><br/>
+                                        <strong>CALLERS EXPERIENCING SUICIDAL IDEATION/INTENTION </strong><br/>
                                         Dealing with a suicidal caller can be stressful. 
-                                        <Redish>We need to remind them that we are not a suicide hotline, but a prayer line.  We need to ask them if they need to contact 911 from the onset. </Redish>
+                                        <Redish> We need to remind them that we are not a suicide hotline, but a prayer line.  We need to ask them if they need to contact 911 from the onset. </Redish>
                                         Please contact the shift leader if you feel support is needed quickly for yourself/for the caller.   
                                     </p>
 
@@ -480,9 +487,9 @@ const PrayerBinder = () => {
                                 <td>
                                     <ol>
                                         <li><Redish><strong>ASSESS</strong></Redish> – <Blueish>Has the caller called 911?</Blueish> Complete the <strong>Suicidal Report</strong> (pink sheet) to assess if caller is suicidal or experiencing suicidal ideation (fighting thoughts) or to assess if caller is at risk e.g. cutting, has weapon, pills, previous attempts etc.  A helpful question is: “Is there anything around you that could cause you harm?”</li>
-                                        <li><Redish><strong>CALL 911 - if harm has been done. </strong></Redish> Take as much information as you can within reason and call 911 if serious harm to self or others has been committed. <Blueish>*Contact Your Shift Leader via THRIO/TEXT (see below)</Blueish></li>
+                                        <li><Redish><strong>CALL 911 - if harm has been done. </strong></Redish> Take as much information as you can within reason and call 911 if serious harm to self or others has been committed. <Blueish>*Contact Your Shift Leader via DISCORD/TEXT (see below)</Blueish></li>
                                         <li><Redish><strong>HIGH CONCERNS – see SUICIDE HOTLINE* – </strong></Redish>If you feel caller needs support as soon as possible, <Blueish>please contact Shift Leader <strong>(M – F, 2-10PM)</strong></Blueish> for assistance at <Blueish><strong>905-332-6400 x2373.</strong></Blueish></li>
-                                        <li>You may also contact online staff on Telus Call Centre (THRIO) <Redish><strong>Company Directory: Go to QUEUES; type in PLine EN</strong></Redish> in the search box or use the “down” arrow/tab to locate this queue. You will see that specific message board; type your note at the bottom to all staff and press the “send” button, which looks like this: <Redish>`{'>'}`!</Redish><br/>
+                                        <li>You may also contact online staff on Twilio Call Centre <Redish><strong>Company Directory: Go to QUEUES; type in PLine EN</strong></Redish> in the search box or use the “down” arrow/tab to locate this queue. You will see that specific message board; type your note at the bottom to all staff and press the “send” button, which looks like this: <Redish>`{'>'}`!</Redish><br/>
                                          <Blueish>(a tiny checkmark will show it was read by staff)</Blueish></li>
                                     </ol>
                                 </td>
@@ -496,7 +503,7 @@ const PrayerBinder = () => {
                                 </td>
                                 <td>
                                     <Redish>*1-800 SUICIDE (784-2433)</Redish> or <Redish>1-800-273-TALK (8255)</Redish> or 
-                                    dial <Redish>211</Redish> Internet: <Blueish> <a href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a>  or <a href="https://www.suicideprevention.ca" style={{color: "#178B96"}}>www.suicideprevention.ca</a></Blueish>
+                                    dial <Redish>211</Redish> Internet: <Blueish> <a target="_blank" href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a>  or <a target="_blank" href="https://www.suicideprevention.ca" style={{color: "#178B96"}}>www.suicideprevention.ca</a></Blueish>
                                 </td>
                             </tr>
                             <tr>
@@ -508,7 +515,7 @@ const PrayerBinder = () => {
                                 </td>
                                 <td>
                                     <Redish>*1-800-273-TALK (8255)</Redish> or Crisis Services Canada: <Redish>1-833-456-4566</Redish>
-                                    TEXT: <Redish>45645</Redish> or dial <Redish>211</Redish> | Internet: <a href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a>
+                                    TEXT: <Redish>45645</Redish> or dial <Redish>211</Redish> | Internet: <a target="_blank" href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -531,7 +538,7 @@ const PrayerBinder = () => {
                                 <td>
                                     211 provides information to deal with life's challenges such as abuse, disabilities, 
                                     mental health, food, homelessness, health care, income support, etc.
-                                    Dial <Redish>211 (CANADA or USA)</Redish>or <a href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a> (CANADA); <a href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a> (USA)
+                                    Dial <Redish>211 (CANADA or USA)</Redish>or <a target="_blank" href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a> (CANADA); <a target="_blank" href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a> (USA)
                                 </td>
                             </tr>
 
@@ -557,7 +564,7 @@ const PrayerBinder = () => {
 
                                 <td>
                                     CANADA <Redish>1-866-863-0511</Redish> | TEXT:  <Redish>#SAFE OR #7233</Redish> <br/>
-                                    Internet: <a href="https://www.awhl.org" style={{color: "#178B96"}}>www.awhl.org</a>
+                                    Internet: <a target="_blank" href="https://www.awhl.org" style={{color: "#178B96"}}>www.awhl.org</a>
                                 </td>
                             </tr>
                             
@@ -593,7 +600,7 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>
-                                    <Redish>211</Redish> or <Redish>1-800-799-7233</Redish> | Internet: <a href="https://www.thehotline.org" style={{color: "#178B96"}}>www.thehotline.org</a>
+                                    <Redish>211</Redish> or <Redish>1-800-799-7233</Redish> | Internet: <a target="_blank" href="https://www.thehotline.org" style={{color: "#178B96"}}>www.thehotline.org</a>
                                 </td>
                             </tr>
                             
@@ -617,7 +624,7 @@ const PrayerBinder = () => {
 
                                 <td>
                                     <Redish>1-844-458-HOPE (4673)</Redish> – providing emotional and spiritual support during Covid-19 
-                                    <Blueish>(9am-9pm EDT; 7 days a week; leave message); </Blueish>
+                                    <Blueish> (9am-9pm EDT; 7 days a week; leave message); </Blueish>
                                     resource assistance <Redish>*Not to be used for suicidal prevention</Redish>
                                 </td>
                             </tr>
@@ -628,9 +635,8 @@ const PrayerBinder = () => {
                                 </td>
                                 <td>
                                     <Redish>1-833-900-1010</Redish> - 24/7 Confidential Help 
-                                    Internet: <a href="https://www.canadianhumantraffickinghotline.ca/contact/" style={{color: "#178B96"}}>www.canadianhumantraffickinghotline.ca/contact/</a>
-                                    <Blueish>CHAT function on website</Blueish>
-                                    <Redish>Also report tips about potential trafficking</Redish>
+                                    Internet: <a target="_blank" href="https://www.canadianhumantraffickinghotline.ca/contact/" style={{color: "#178B96"}}>www.canadianhumantraffickinghotline.ca/contact/</a> <Blueish>CHAT function on website</Blueish>
+                                    <Redish> Also report tips about potential trafficking</Redish>
                                 </td>
                             </tr>
 
@@ -641,9 +647,9 @@ const PrayerBinder = () => {
                                 <td>
                                
                                     <Redish>1-800-373-7888 </Redish> | Text: <Redish>233733</Redish>
-                                    Internet: <a href="https://www.canadianhumantraffickinghotline.ca/contact/" style={{color: "#178B96"}}>www.canadianhumantraffickinghotline.ca/contact/</a>
-                                    <Blueish>CHAT function on website</Blueish>
-                                    <Redish>Also report tips about potential trafficking</Redish>
+                                    Internet: <a target="_blank" href="https://www.canadianhumantraffickinghotline.ca/contact/" style={{color: "#178B96"}}>www.canadianhumantraffickinghotline.ca/contact/</a>
+                                    <Blueish> CHAT function on website</Blueish>
+                                    <Redish> Also report tips about potential trafficking</Redish>
                                 </td>
                             </tr>
 
@@ -663,8 +669,8 @@ const PrayerBinder = () => {
 
                                 <td>
                                     SALVATION ARMY - Toronto area: <Redish>416-425-2111 or call Hope Hotlines above.</Redish>
-                                    <a href="https://www.salvationarmy.ca" style={{color: "#178B96"}}> www.salvationarmy.ca</a> /
-                                    <a href="https://www.salvationarmyusa.org" style={{color: "#178B96"}}> www.salvationarmyusa.org</a> 
+                                    <a target="_blank" href="https://www.salvationarmy.ca" style={{color: "#178B96"}}> www.salvationarmy.ca</a> /
+                                    <a target="_blank" href="https://www.salvationarmyusa.org" style={{color: "#178B96"}}> www.salvationarmyusa.org</a> 
                                 </td>
                             </tr>
 
@@ -674,7 +680,7 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>
-                                    <a href="https://www.sheltersafe.ca" style={{color: "#178B96"}}>www.sheltersafe.ca</a> 
+                                    <a target="_blank" href="https://www.sheltersafe.ca" style={{color: "#178B96"}}>www.sheltersafe.ca</a> 
                                     to locate a shelter near you; call <Redish>211</Redish>
                                 </td>
                             </tr>
@@ -701,7 +707,7 @@ const PrayerBinder = () => {
                 <Accordion.Body>
                     <h6><Redish><strong>FOR A NEW TESTAMENT (Life Application Version)</strong></Redish></h6>
 
-                    <p>Our most important resource!  Should a caller need a Bible, we offer the <Blueish>Life Application New Testament.</Blueish> 
+                    <p>Our most important resource!  Should a caller need a Bible, we offer the <Blueish>Life Application New Testament. </Blueish> 
                          Please <Blueish>record the caller’s information clearly on the Ministry Response Form:</Blueish> name, phone number, 
                         full mailing address and email address, so that our follow-up team can contact them.
                     </p>
@@ -727,16 +733,15 @@ const PrayerBinder = () => {
                             <tr>
                                 <td>
                                     <strong>
-                                    100 HUNTLEY STREET WEBSITE  
+                                    100 HUNTLEY STREET WEBSITE  <br/>
                                     <Blueish>For questions about faith…or almost anything! </Blueish>
                                     </strong>
                                 </td>
 
                                 <td>
-                                    <a href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>
+                                    <a target="_blank" href="https://www.100hs.ca/topic" style={{color: "#178B96"}}>www.100hs.ca/topic</a>
                                     – a wide variety of media and other topical resources. 
-                                    Use the <Redish><strong>Search</strong></Redish> box on the top right-hand side of the screen or go to the <Redish><strong>Prayer</strong></Redish> subheading; 
-                                    then click on <Redish><strong>Resources and Topics</strong></Redish> for a topical index.
+                                   
                                 </td>
                             </tr>
                         </tbody>
@@ -757,7 +762,7 @@ const PrayerBinder = () => {
                                     <p>
                                         <Redish>211</Redish> <Blueish><strong>provides information to deal with life's challenges</strong></Blueish>
                                         such as abuse, disabilities, mental health, food, homelessness, health care, income support, etc. 
-                                        Dial <Redish>211</Redish> (CANADA or USA) or <a href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a> (CANADA); <a href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a>  (USA)
+                                        Dial <Redish>211</Redish> (CANADA or USA) or <a target="_blank" href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a> (CANADA); <a target="_blank" href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a>  (USA)
                                     </p>
                                 </td>
                             </tr>
@@ -791,7 +796,7 @@ const PrayerBinder = () => {
                                      <strong>ASSAULTED WOMEN’S HELPLINE</strong>
                                 </td>
                                 <td>
-                                    CANADA <Redish>1-866-863-0511</Redish> | TEXT: <Redish>#SAFE OR #7233</Redish> | <a href="https://www.awhl.org" style={{color: "#178B96"}}>www.awhl.org</a>
+                                    CANADA <Redish>1-866-863-0511</Redish> | TEXT: <Redish>#SAFE OR #7233</Redish> | <a target="_blank" href="https://www.awhl.org" style={{color: "#178B96"}}>www.awhl.org</a>
                                 </td>
                             </tr>
                             <tr>
@@ -836,10 +841,10 @@ const PrayerBinder = () => {
                                 <td>
                                     <p>
                                     See <Blueish>SALVATION ARMY</Blueish> or <Blueish>211</Blueish> for local support 
-                                    <Redish>AA - Alcoholics Anonymous</Redish> - <a href="https://www.aa.org" style={{color: "#178B96"}}>www.aa.org</a> - <a href="https://www.al-anon.org" style={{color: "#178B96"}}>www.al-anon.org</a> - for family/friends who are concerned about someone with addictions 
-                                    <Redish>NA - Narcotics Anonymous (CANADA)</Redish> – <a href="https://www.aa.org" style={{color: "#178B96"}}>www.canaacna.org</a> <Redish>1-855-562-2262 </Redish>
-                                    <Redish>NA - Narcotics Anonymous – (USA)</Redish> - <a href="https://www.na.org" style={{color: "#178B96"}}>www.na.org</a> - find meetings and more | For information: 
-                                    <a href="https://www.na.org" style={{color: "#178B96"}}>www.na.org</a>
+                                    <Redish>AA - Alcoholics Anonymous</Redish> - <a target="_blank" href="https://www.aa.org" style={{color: "#178B96"}}>www.aa.org</a> - <a target="_blank" href="https://www.al-anon.org" style={{color: "#178B96"}}>www.al-anon.org</a> - for family/friends who are concerned about someone with addictions 
+                                    <Redish>NA - Narcotics Anonymous (CANADA)</Redish> – <a target="_blank" href="https://www.aa.org" style={{color: "#178B96"}}>www.canaacna.org</a> <Redish>1-855-562-2262 </Redish>
+                                    <Redish>NA - Narcotics Anonymous – (USA)</Redish> - <a target="_blank" href="https://www.na.org" style={{color: "#178B96"}}>www.na.org</a> - find meetings and more | For information: 
+                                    <a target="_blank" href="https://www.na.org" style={{color: "#178B96"}}>www.na.org</a>
                                     </p>
                                 </td>
                             </tr>
@@ -850,8 +855,8 @@ const PrayerBinder = () => {
                                 <td>
                                     <p>
                                         <Blueish><strong>CELEBRATE RECOVERY</strong></Blueish> – see group finders on website <br/>
-                                        <Redish>CANADA</Redish>: <a href="https://www.celebraterecovery.ca" style={{color: "#178B96"}}>www.celebraterecovery.ca</a> <br/>
-                                        <Redish>USA</Redish>:  <a href="https://www.celebraterecovery.com" style={{color: "#178B96"}}>www.celebraterecovery.com</a>
+                                        <Redish>CANADA</Redish>: <a target="_blank" href="https://www.celebraterecovery.ca" style={{color: "#178B96"}}>www.celebraterecovery.ca</a> <br/>
+                                        <Redish>USA</Redish>:  <a target="_blank" href="https://www.celebraterecovery.com" style={{color: "#178B96"}}>www.celebraterecovery.com</a>
                                     </p>
                                 </td>
                             </tr>
@@ -861,7 +866,7 @@ const PrayerBinder = () => {
                                 </td>
                                 <td>
                                     <p>
-                                        <Blueish><strong>FREEDOM SESSION </strong></Blueish> – <a href="https://www.freedomsession.com" style={{color: "#178B96"}}>www.freedomsession.com</a> 
+                                        <Blueish><strong>FREEDOM SESSION </strong></Blueish> – <a target="_blank" href="https://www.freedomsession.com" style={{color: "#178B96"}}>www.freedomsession.com</a> 
                                         - may be taken in the comfort of your home by video <br/>
                                         <Redish><strong>Contact: </strong> <br/>
                                             Canadian Director:  236-988-3366  <br/>
@@ -875,7 +880,7 @@ const PrayerBinder = () => {
                                      <strong>RESTORATION MINISTRY FOR PASTORS	</strong>
                                 </td>
                                 <td>
-                                    <a href="https://www.celebraterecovery.com/cr-pastors" style={{color: "#178B96"}}>www.celebraterecovery.com/cr-pastors</a>
+                                    <a target="_blank" href="https://www.celebraterecovery.com/cr-pastors" style={{color: "#178B96"}}>www.celebraterecovery.com/cr-pastors</a>
                                 </td>
                             </tr>
                             <tr>
@@ -891,9 +896,9 @@ const PrayerBinder = () => {
                                      <strong>TEEN CHALLENGE CANADA or USA</strong>
                                 </td>
                                 <td>
-                                    <a href="https://www.teenchallenge.ca" style={{color: "#178B96"}}>www.teenchallenge.ca</a>
+                                    <a target="_blank" href="https://www.teenchallenge.ca" style={{color: "#178B96"}}>www.teenchallenge.ca</a>
                                     London <Redish>1-877-343-1022</Redish> (Adult programs available)  – 
-                                    <a href="https://www.teenchallengeusa.com/centers" style={{color: "#178B96"}}>www.teenchallengeusa.com/centers</a>
+                                    <a target="_blank" href="https://www.teenchallengeusa.com/centers" style={{color: "#178B96"}}>www.teenchallengeusa.com/centers</a>
                                  
                                 </td>
                             </tr>
@@ -923,18 +928,18 @@ const PrayerBinder = () => {
                                 <td>
                                     <strong>
                                     ALPHA INTERNATIONAL Alpha
-                                    </strong>
+                                    </strong><br/>
                                     <Blueish>is a course that creates a space online or in person, where people can have conversation about faith, 
                                     life and God (a great place to bring friends)	</Blueish>
                                 </td>
 
                                 <td>
                                     <p>
-                                        <a href="https://www.alpha.org" style={{color: "#178B96"}}>www.alpha.org </a> <br/>       
+                                        <a target="_blank" href="https://www.alpha.org" style={{color: "#178B96"}}>www.alpha.org </a> <br/>       
                                         <Redish>Canada - 1-800-743-0899 </Redish> (General Inquiries – PDT) <br/> 
                                         <Redish>USA -  1-800-DO-ALPHA or 1-800-(362-5742)</Redish><br/> 
                                         Other countries:  <br/>
-                                        see the link below <a href="https://www.alpha.org/about/national-offices/" style={{color: "#178B96"}}>www.alpha.org/about/national-offices/ </a>
+                                        see the link below <a target="_blank" href="https://www.alpha.org/about/national-offices/" style={{color: "#178B96"}}>www.alpha.org/about/national-offices/ </a>
                                     </p>
                                 </td>
                             </tr>
@@ -947,7 +952,7 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>
-                                <a href="https://www.100words.ca" style={{color: "#178B96"}}>www.100words.ca</a>
+                                <a target="_blank" href="https://www.100words.ca" style={{color: "#178B96"}}>www.100words.ca</a>
                                      – “through the Bible” devotional reading program by our founder,
                                     David Mainse (on our Castle app or may be emailed to caller)
                                 </td>
@@ -963,7 +968,28 @@ const PrayerBinder = () => {
                                 <td>
                                     Fill out a <Blueish><strong>Ministry Response Form</strong></Blueish> and provide full name, address, phone number and email address.
                                     <Redish>Note if they are over 18 years of age</Redish>. Please allow a couple weeks for their response.
-                                    <Redish>Click on this link to sign up:</Redish> <a href="https://www.thelife.com/crossroads" style={{color: "#178B96"}}>www.thelife.com/crossroads</a> 
+                                    <Redish>Click on this link to sign up:</Redish> <a target="_blank" href="https://www.thelife.com/crossroads" style={{color: "#178B96"}}>www.thelife.com/crossroads</a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>
+                                    LEADERSHIP/COACHING 
+                                    </strong><br/>
+                                    <Blueish>Whether your goal is to better yourself or… change the world, there are many ways to feel the call to lead. 
+                                        We are here to help you answer it… All it takes is a clear plan, daily practice, and a community of fellow change-makers with you at every step as you lead powerful, 
+                                        positive through values-based leadership” (from website)</Blueish>
+
+                                </td>
+
+                                <td>
+                                Website (also on many social media platforms): 
+                                <a target="_blank" href="https://www.maxwellleadership.com" style={{color: "#178B96"}}>https://www.maxwellleadership.com</a> <br/>
+                                Maxwell Minutes – daily coaching videos <a target="_blank" href="https://www.maxwellleadership.com/minute-with-maxwell/" style={{color: "#178B96"}}>https://www.maxwellleadership.com/minute-with-maxwell/</a><br/>
+                                *see website for podcast, webinars, academy learning (available online internationally)
+                                *John Maxwell has written many books on leadership available in your local bookstore
+
                                 </td>
                             </tr>
 
@@ -987,9 +1013,9 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>
-                                    <Redish>CANADA</Redish> -  <a href="https://www.preceptministries.ca/online-studies" style={{color: "#178B96"}}>www.preceptministries.ca/online-studies</a>
-                                    <Redish>USA</Redish> - <a href="https://www.learnthebibleonline.com" style={{color: "#178B96"}}>www.learnthebibleonline.com</a>
-                                    <a href="precept.org" style={{color: "#178B96"}}>precept.org</a>
+                                    <Redish>CANADA</Redish> -  <a target="_blank" href="https://www.preceptministries.ca/online-studies" style={{color: "#178B96"}}>www.preceptministries.ca/online-studies</a>
+                                    <Redish> USA</Redish> - <a target="_blank" href="https://www.learnthebibleonline.com" style={{color: "#178B96"}}>www.learnthebibleonline.com</a>
+                                    <a target="_blank" href="precept.org" style={{color: "#178B96"}}>precept.org</a>
                                    
                                 </td>
                             </tr>
@@ -1001,8 +1027,8 @@ const PrayerBinder = () => {
 
                                 <td>
                                 <Blueish><strong>Pastor Neil Cole</strong></Blueish> – follow-up pastor at Crossroads -  teaching on Freedom in Christ/victory over the darkness 
-                                <Redish>YouTube Channel: <u>niteliteonlineficm</u>. </Redish> 
-                                <a href="https://www.youtube.com/user/niteliteonlineficm" style={{color: "#178B96"}}>www.youtube.com/user/niteliteonlineficm</a>
+                                <Redish> YouTube Channel: <u>niteliteonlineficm</u>. </Redish> 
+                                <a target="_blank" href="https://www.youtube.com/user/niteliteonlineficm" style={{color: "#178B96"}}>www.youtube.com/user/niteliteonlineficm</a>
                                 </td>
                             </tr>
 
@@ -1012,8 +1038,7 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>
-                                     Dr. Rob Reimer’s book: Soul Care:  See on
-                                    <a href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>
+                                     Dr. Rob Reimer’s book: Soul Care:  See on <a target="_blank" href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>
                                 </td>
                             </tr>
 
@@ -1032,7 +1057,7 @@ const PrayerBinder = () => {
                                 </td>
                                 <td>
                                     <p>
-                                        <a href="https://www.divorcecare.org" style={{color: "#178B96"}}>www.divorcecare.org</a> <br/>
+                                        <a target="_blank" href="https://www.divorcecare.org" style={{color: "#178B96"}}>www.divorcecare.org</a> <br/>
                                         Find (church) s`upport groups-receive daily emails <br/>
                                         Phone: <Redish>1-800-489-7778</Redish> <Blueish>(North America)</Blueish> <br/>
                                         <Redish>919-562-2112</Redish> <Blueish>(International)</Blueish> <br/>
@@ -1064,7 +1089,7 @@ const PrayerBinder = () => {
                                     <strong>DOMESTIC VIOLENCE USA</strong>
                                 </td>
                                 <td>
-                                    <Redish>211</Redish> or <Redish>1-800-799-7233</Redish> | <a href="https://www.thehotline.org" style={{color: "#178B96"}}>www.thehotline.org</a>
+                                    <Redish>211</Redish> or <Redish>1-800-799-7233</Redish> | <a target="_blank" href="https://www.thehotline.org" style={{color: "#178B96"}}>www.thehotline.org</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -1085,8 +1110,8 @@ const PrayerBinder = () => {
                                 </td>
                                 <td>
                                     <p>
-                                        <a href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a> <br/>
-                                        Video clips and information also available on <a href="100huntley.com" style={{color: "#178B96"}}>100huntley.com</a> <br/>
+                                        <a target="_blank" href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a> <br/>
+                                        Video clips and information also available on <a target="_blank" href="100huntley.com" style={{color: "#178B96"}}>100huntley.com</a> <br/>
                                         Dr. Grant Mullen is a Christian medical professional and a friend to our ministry
                                     </p>
                                 </td>
@@ -1123,7 +1148,16 @@ const PrayerBinder = () => {
                                     See <Blueish>SALVATION ARMY</Blueish> subheading
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <strong> Mental Health Association/Mental Health America	</strong><br />
+                                    <Blueish>*Includes help index for finding help for others and finding help for yourself; finding help in crisis, and more…</Blueish>
 
+                                </td>
+                                <td>
+                                    See above in <Blueish>CHRISTIAN GROWTH</Blueish>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
                                     <strong>RESTORATION MINISTRY FOR EMOTIONAL/SPIRITUAL/MENTAL HEALTH</strong>
@@ -1156,11 +1190,10 @@ const PrayerBinder = () => {
                                 <td>
                                     <strong>FOCUS ON THE FAMILY CANADA	</strong>
                                     For parenting, relationships, marriage, sexuality, etc. 
-                                    Resources for the family*free one-time counselling
+                                    Resources for the family *free one-time counselling
                                 </td>
                                 <td>
-                                     <a href="https://www.focusonthefamily.ca/get-help" style={{color: "#178B96"}}>www.focusonthefamily.ca/get-help</a>
-                                     or call <Redish>1-800-661-9800</Redish> <br/>
+                                     <a target="_blank" href="https://www.focusonthefamily.ca/get-help" style={{color: "#178B96"}}>www.focusonthefamily.ca/get-help</a> or call <Redish>1-800-661-9800</Redish> <br/>
                                     <Blueish>Monday to Friday: 8 a.m.- 4 p.m. PT <br/>
                                     Except Tuesdays: 9 a.m.- 4 p.m. PT</Blueish>
                                 </td>
@@ -1172,8 +1205,7 @@ const PrayerBinder = () => {
                                     Resources for the family*free one-time counselling
                                 </td>
                                 <td>
-                                    <a href="https://www.focusonthefamily.com/get-help" style={{color: "#178B96"}}>www.focusonthefamily.com/get-help</a>
-                                     or call <Redish>1-800-A-FAMILY</Redish> or <Redish>1-855-771-HELP (4357)</Redish>
+                                    <a target="_blank" href="https://www.focusonthefamily.com/get-help" style={{color: "#178B96"}}>www.focusonthefamily.com/get-help</a> or call <Redish>1-800-A-FAMILY</Redish> or <Redish>1-855-771-HELP (4357)</Redish>
                                 </td>
                             </tr>
                             <tr>
@@ -1182,7 +1214,7 @@ const PrayerBinder = () => {
                                     <Blueish>Family Life Canada	</Blueish>
                                 </td>
                                 <td>
-                                    <Redish>1-800-247-3180</Redish> or <a href="https://www.marriagementoringinitiative.com" style={{color: "#178B96"}}>www.marriagementoringinitiative.com</a>
+                                    <Redish>1-800-247-3180</Redish> or <a target="_blank" href="https://www.marriagementoringinitiative.com" style={{color: "#178B96"}}>www.marriagementoringinitiative.com</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -1202,9 +1234,8 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>                                   
-                                    <a href="https://www.griefshare.org" style={{color: "#178B96"}}>www.griefshare.org</a>
-                                    Find (church) support groups-receive daily emails 
-                                    Phone: <Redish>1-800-395-5755</Redish> <Blueish>(North America)</Blueish>
+                                    <a target="_blank" href="https://www.griefshare.org" style={{color: "#178B96"}}>www.griefshare.org</a> Find (church) support groups-receive daily emails 
+                                    Phone: <Redish>1-800-395-5755</Redish> <Blueish>(North America) </Blueish>
                                     <Redish>919-562-2112</Redish> <Blueish>(International)</Blueish>
                                 </td>
                             </tr>
@@ -1235,7 +1266,7 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>                                   
-                                    See <Blueish>SEX/HUMAN TRAFFICKING </Blueish>subheading
+                                    See under <Blueish>SEX/HUMAN TRAFFICKING </Blueish>subheading
                                 </td>
                             </tr>
                         </tbody>
@@ -1257,8 +1288,10 @@ const PrayerBinder = () => {
 
                                 <td>
                                    <p>
-                                   CRU Military - P.O. Box 120124, Newport News, VA 23612 <br/>
-                                   Phone: <Redish>1-757-928-7200/1-800-444-6006</Redish> | <a href="https://www.crumilitary.org" style={{color: "#178B96"}}>www.crumilitary.org</a>
+                                   CRU Military - 100 Lake Hart Drive, Orlando, FL 32823  <br/>
+                                   <a target="_blank" href="https://www.crumilitary.org" style={{color: "#178B96"}}>www.crumilitary.org</a><br/>
+                                  Email: <a target="_blank" href="mailto:info@crumilitary.org" style={{color: "#178B96"}}>info@crumilitary.org</a><br/>
+                                   Phone: <Redish>1-800-444-6006</Redish>
                                    </p>
                                 </td>
                             </tr>
@@ -1267,9 +1300,9 @@ const PrayerBinder = () => {
                                     <strong>MILITARY/VETERANS – DISTRESS LINE-CANADA	</strong>
                                 </td>
                                 <td>                                   
-                                    <Redish>1-800-273-TALK (8255)</Redish> or Crisis Services Canada:
-                                    <Redish>1-833-456-4566</Redish>; Text: <Redish>45645</Redish> or dial <Redish>211</Redish> | Internet: 
-                                    <a href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a>
+                                    <Redish>1-800-273-TALK (8255)</Redish> or <br/>
+                                    Talk Suicide Canada:  1-833-456-4566;  <br/>
+                                    Text:  45645 or dial 211  Internet: <a target="_blank" href="https://www.211.ca" style={{color: "#178B96"}}>www.211.ca</a>                                    
                                 </td>
                             </tr>
                             <tr>
@@ -1278,8 +1311,19 @@ const PrayerBinder = () => {
                                 </td>
                                    
                                 <td>                                   
-                                    <Redish>1-800-273-TALK (8255)</Redish> or dial <Redish>211</Redish> <Redish>*1-800-SUICIDE (784-2433)</Redish>
-                                    or Internet: <a href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a> or  <a href="https://www.suicidehotlines.com" style={{color: "#178B96"}}>www.suicidehotlines.com</a>
+                                    <Redish> Dial 988 * previously 1-800-273-TALK (8255)</Redish> <br/>                         
+                                    USA – Internet: <a target="_blank" href="988lifeline.org" style={{color: "#178B96"}}>988lifeline.org</a> <br/>
+                                    Or Internet: <a target="_blank" href="https://www.211.org" style={{color: "#178B96"}}>www.211.org</a>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>MUSLIM</strong>
+                                </td>
+
+                                <td>                                   
+                                See ARABIC/MUSLIM OUTREACH 
                                 </td>
                             </tr>
                             <tr>
@@ -1288,11 +1332,46 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>                                   
-                                    See <Blueish>ADDICTION/RESTORATION SUPPORT </Blueish>
+                                    See <Blueish>ADDICTION/RESTORATION SUPPORT subheading </Blueish>
                                 </td>
                             </tr>
                         </tbody>
+                        <thead>
+                            <tr>
+                                <th colSpan="2">
+                                PERSECUTION
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>
+                                    OPEN DOORS INTERNATIONAL 
+                                    </strong><br/>
+                                    <Blueish>
+                                        SERVING THE PERSECUTED CHURCH
+                                        *THESE WEBSITES EXPLAIN HOW TO SUPPORT PERSECUTED CHRISTIANS IN PRAYER OR OTHER WAYS, EG. ADVOCACY
+                                    </Blueish>
+                                </td>
+                                <td>
+                                    Canada: 905-636-0944  <br/>
+                                    <a target="_blank" href="https://www.opendoorscanada.org/" style={{color: "#178B96"}}>https://www.opendoorscanada.org</a> <br/>
 
+                                    USA:  1-800-896-5285 <br/>
+                                    <a target="_blank" href="https://www.opendoors.org/en-US/" style={{color: "#178B96"}}>https://www.opendoors.org/en-US</a> <br/>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>ALPHA/CELEBRATE RECOVERY</strong>
+                                </td>
+                                <td>
+                                Specific programs for prisoners – see above under <Blueish><strong>CHRISTIAN GROWTH</strong></Blueish>
+                                </td>
+                            </tr>
+                        </tbody>
                         <thead>
                             <tr>
                                 <th colSpan="2">
@@ -1308,7 +1387,14 @@ const PrayerBinder = () => {
                                     </strong>
                                 </td>
                                 <td>
-                                Crossroads Prison Ministries – <Redish>1-844-677-6658</Redish> – <a href="https://www.cpministries.ca" style={{color: "#178B96"}}>www.cpministries.ca</a>
+                                    Prison Fellowship Canada – 1-844-618-5867 <br/>
+                                    website: <a target="_blank" href="https://prisonfellowship.ca" style={{color: "#178B96"}}>https://prisonfellowship.ca</a> <br/>
+                                    Email:  <a target="_blank" href="mailto:info@prisonfellowship.ca " style={{color: "#178B96"}}>info@prisonfellowship.ca </a> <br/><br/>
+
+                                    Prison Fellowship USA – 1-800-206-9764 <br/>
+                                    website: <a target="_blank" href="https://prisonfellowship.org" style={{color: "#178B96"}}>https://prisonfellowship.org</a> <br/>
+                                    Email:  <a target="_blank" href="mailto:info@pfm.org " style={{color: "#178B96"}}>info@prm.org </a>
+                                    
                                 </td>
                             </tr>
 
@@ -1360,9 +1446,9 @@ const PrayerBinder = () => {
                                     <strong>SHELTERS/HOMELESSNESS/ADDICTIONS HELP IN USA OR CANADA</strong>
                                 </td>
                                 <td>
-                                    SALVATION ARMY –Toronto area: <Redish>416-425-2111 or call</Redish> 
-                                    <Blueish><strong>Hope Hotlines</strong></Blueish> above.
-                                    <a href="https://www.salvationarmy.ca" style={{color: "#178B96"}}>www.salvationarmy.ca</a> | <a href="https://www.salvationarmyusa.org" style={{color: "#178B96"}}>www.salvationarmyusa.org</a>
+                                    SALVATION ARMY –Toronto area: <Redish>416-425-2111</Redish><br/>
+                                    <Blueish> 1-800-SAL-ARMY (725-2769) – Canada and USA</Blueish>.<br/>
+                                    <a target="_blank" href="https://www.salvationarmy.ca" style={{color: "#178B96"}}>www.salvationarmy.ca</a> | <a target="_blank" href="https://www.salvationarmyusa.org" style={{color: "#178B96"}}>www.salvationarmyusa.org</a>
                                 </td>
                             </tr>
 
@@ -1388,13 +1474,13 @@ const PrayerBinder = () => {
                             <tr>
                                 <td>
                                     <strong>SEX/HUMAN TRAFFICKING HELP HOTLINE CANADA </strong> 
-                                    <a href="https://www.100hs.com" style={{color: "#178B96"}}>www.100hs.com</a>   	
+                                    <a target="_blank" href="https://www.100hs.com" style={{color: "#178B96"}}>www.100hs.com</a>   	
                                 </td>
                                 <td>
                                     <Redish>1-833-900-1010</Redish> - 24/7 Confidential Help
-                                    Internet: <a href="https://www.canadianhumantraffickinghotline.ca/contact/" style={{color: "#178B96"}}>www.canadianhumantraffickinghotline.ca/contact/</a>  
-                                    <Blueish>CHAT function on website</Blueish>
-                                    <Redish>Also report tips about potential trafficking</Redish>
+                                    Internet: <a target="_blank" href="https://www.canadianhumantraffickinghotline.ca/contact/" style={{color: "#178B96"}}>www.canadianhumantraffickinghotline.ca/contact/</a> <br/>
+                                    <Blueish>CHAT function on website</Blueish><br/>
+                                    <Redish>Also report tips or concerns about potential trafficking</Redish>
                                 </td>
                             </tr>
 
@@ -1404,10 +1490,9 @@ const PrayerBinder = () => {
                                     	
                                 </td>
                                 <td>
-                                    <Redish>1-800-373-7888</Redish> - Text: 233733 
-                                    Internet: <a href="https://www.humantraffickinghotline.org/" style={{color: "#178B96"}}>www.humantraffickinghotline.org/</a>  
-                                    <Blueish>CHAT function on website</Blueish>
-                                    <Redish>Also report tips about potential trafficking</Redish>
+                                    <Redish>1-800-373-7888</Redish> - Text: 233733 TTY: 711<br/>
+                                    <a target="_blank" href="https://www.humantraffickinghotline.org/" style={{color: "#178B96"}}>www.humantraffickinghotline.org/</a>  <br/>
+                                    <Redish>Also has CHAT/report tips (similar to Canada)</Redish>
                                 </td>
                             </tr>
 
@@ -1427,8 +1512,42 @@ const PrayerBinder = () => {
                                 </td>
 
                                 <td>
-                                <a href="https://www.sheltersafe.ca" style={{color: "#178B96"}}>www.sheltersafe.ca</a>  
+                                <a target="_blank" href="https://www.sheltersafe.ca" style={{color: "#178B96"}}>www.sheltersafe.ca</a>  
                                 to locate a shelter near you; call <Redish>211</Redish>  
+                                </td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th colSpan="2">
+                                WOMEN’S MINISTRY
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>
+                                    WOMEN TOGETHER 
+                                    </strong><br/>
+                                    <Blueish>– empowering and equipping women</Blueish>
+                                </td>
+                                <td>
+                                Beautiful global women’s ministry with live Zoom call conferences, mentoring for Moms/leaders, prayer groups, Bible studies for all ages and stages and more!!       
+                                    <a target="_blank" href="https://women-together.org/online-programs" style={{color: "#178B96"}}> https://women-together.org/online-programs/</a>  
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>WOMEN AGLOW - INTERNATIONAL</strong>
+                                </td>
+                                <td>
+                                <a target="_blank" href="https://www.aglow.org" style={{color: "#178B96"}}> https://www.aglow.org</a>  <br/>
+                                Phone:  1-425-775-7282 <br/>
+                                Canada - <a target="_blank" href="ttps://www.aglowcanada.com" style={{color: "#178B96"}}> https://www.aglowcanada.com</a> <br/>
+                                Phone:  1-306-993-2420
+
                                 </td>
                             </tr>
                         </tbody>
@@ -1443,7 +1562,7 @@ const PrayerBinder = () => {
                         Dear Prayer Partner, <Blueish>CCCI (Crossroads Christian Communications Inc)</Blueish> has so much to offer our callers.
                         As media missionaries, it is our heart and passion to reach people around the globe in ways that they can find a <Redish>personal connection </Redish> to the love of <Redish>JESUS</Redish>.
                         The internet (amongst television and other forms of media) is a powerful vehicle in which we can introduce people of all ages and stages to our Lord.
-                        We are so confident that HE is able to meet the need of every single person on this planet!   
+                        We are so confident that HE is able to meet the need of every single person on this planet!   <br/>
                         We also hope that you too can be touched and grow in your daily walk with the Lord and enjoy the great programs and online ministry that we offer.
                         We encourage you to look at the resources below.. and be so very blessed!!!  
                     </p>
@@ -1459,34 +1578,35 @@ const PrayerBinder = () => {
                         <tbody>
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="100 Huntley Street" src={require("../assets/images/100Huntley.jpg")} />
                                 </td>
 
                                 <td>
                                     <strong>100 HUNTLEY STREET</strong> – Canada’s longest running daily television program with a Christian perspective;
                                     this program tells the amazing stories of people who have had life-changing encounters with God. 
-                                    <a href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>
+                                    <a target="_blank" href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com</a><br/>
+                                    RESOURCES/TOPIC INDEX:  <a target="_blank" href="https://100hs.ca/topic" style={{color: "#178B96"}}> 100hs.ca/topic</a>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Crossroads" src={require("../assets/images/crossroadsBanner.png")} />
                                 </td>
 
                                 <td>
                                     <strong>CROSSROADS CHRISTIAN COMMUNICATIONS INC.</strong> – Producing faith and values media content to convey the message
-                                    of God’s love to people around the world. <a href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a> *features <Redish>“Crossroads Cares”</Redish> missions
+                                    of God’s love to people around the world. <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a> *features <Redish>“Crossroads Cares”</Redish> missions
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Castle" src={require("../assets/images/castle.jpg")} />
                                 </td>
 
                                 <td>
-                                    <strong>CASTLE</strong> – <a href="https://www.intothecastle.com" style={{color: "#178B96"}}>www.intothecastle.com</a> -
+                                    <strong>CASTLE</strong> – <a target="_blank" href="https://www.intothecastle.com" style={{color: "#178B96"}}>www.intothecastle.com</a> -
                                     <Redish>FREE</Redish> phone app and video streaming platform for spiritually curious people with content and community to deepen understanding of faith.
                                     <Blueish>· Great shows for all ages; Bible teaching and an online digital pastor to answer questions</Blueish>
                                 </td>
@@ -1494,11 +1614,13 @@ const PrayerBinder = () => {
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Yes TV" src={require("../assets/images/yesTv.jpg")}/>
                                 </td>
 
                                 <td>
-                                    <strong>yesTV</strong> – Canada’s favourite family station <a href="https://www.yestv.com" style={{color: "#178B96"}}>www.yestv.com</a>
+                                    <strong>yesTV</strong> – Canada’s favourite family station <a target="_blank" href="https://www.yestv.com" style={{color: "#178B96"}}>www.yestv.com</a><br/>
+                                    Offers FREE LIVE STREAMING at: <a target="_blank" href="https://www.yestv.com" style={{color: "#178B96"}}>www.yestv.com</a><br/>
+                                    Download the App!!!
                                 </td>
                             </tr>
                         </tbody>
@@ -1506,14 +1628,14 @@ const PrayerBinder = () => {
                         <thead>
                             <tr>
                                 <th colSpan="2">
-                                SOME HIGHLIGHTS FROM <a href= "https://www.crossroads.ca" style={{color: "#fff"}}>CROSSROADS.CA</a> MEDIA
+                                SOME HIGHLIGHTS FROM <a target="_blank" href= "https://www.crossroads.ca" style={{color: "#fff"}}>CROSSROADS.CA</a> MEDIA
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Context" src={require("../assets/images/context.jpg")}/>
                                 </td>
 
                                 <td>
@@ -1524,18 +1646,19 @@ const PrayerBinder = () => {
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="This is your Story" src={require("../assets/images/yourStory.jpg")} />
                                 </td>
 
                                 <td>
-                                    <strong> CANADA CARES:  THE OPIOD CRISIS</strong> - The growing number of overdoses and deaths caused by opioids is a 
-                                    public health emergency AND a spiritual emergency.    
+                                    <strong>THIS IS YOUR STORY</strong> -
+     Through unscripted interviews, Robert Melnichuk explores the transformational moment when his guests relive the “born again” experience.  Join him for these riveting backstories to faith.
+   
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="A better Us"src={require("../assets/images/aBetterUs.jpg")} style={{height: "150px"}}/>
                                 </td>
 
                                 <td>
@@ -1546,7 +1669,7 @@ const PrayerBinder = () => {
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="See Hear Love" src={require("../assets/images/seeHearLove.jpg")} style={{height: "250px"}}/>
                                 </td>
 
                                 <td>
@@ -1557,7 +1680,7 @@ const PrayerBinder = () => {
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="First Peoples Voices" src={require("../assets/images/peoplesVoices.jpg")} />
                                 </td>
 
                                 <td>
@@ -1567,7 +1690,7 @@ const PrayerBinder = () => {
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Hey Meisha" src={require("../assets/images/heyMeisha.jpg")} />
                                 </td>
 
                                 <td>
@@ -1575,31 +1698,18 @@ const PrayerBinder = () => {
                                     the Good News Kids. Produced by <Blueish>YESTV</Blueish>, this show is available to stream on <Blueish>Castle™</Blueish>.
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Cheeky Pandas" src={require("../assets/images/cheekyPandas.png")} />
                                 </td>
 
                                 <td>
-                                    <strong>ROCKIDS TV</strong> - TV series teaches children positive life values and the Bible through fun songs, stories and animation.
+                                    <strong>CHEEKY PANDAS</strong> - In their treehouse studio they have fun adventures together and learn about their faith.
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
-                                </td>
-
-                                <td>
-                                    <strong>Outside the Box with Sheldon Neil</strong> is setting-up to be Canada’s Christian leading voice in Faith,
-                                    Arts and Culture and offers faith-filled and insightful discussion.
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <img alt="" src="" />
+                                    <img alt="Young Once" src={require("../assets/images/youngOnce.jpg")} />
                                 </td>
 
                                 <td>
@@ -1609,7 +1719,7 @@ const PrayerBinder = () => {
 
                             <tr>
                                 <td>
-                                    <img alt="" src="" />
+                                    <img alt="Daughters Of Eve" src={require("../assets/images/daughters.jpg")} style={{height: "200px"}}/>
                                 </td>
 
                                 <td>
@@ -1617,6 +1727,68 @@ const PrayerBinder = () => {
                                 </td>
                             </tr>
 
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th colSpan={2}>DOCUMENTARIES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img alt="Battling Darkness" src={require("../assets/images/battlingDarkness.png")} style={{height: "250px"}} />
+                                </td>
+
+                                <td>
+                                    <strong>BATTLING DARKNESS</strong> With Linda Blair's disturbing performance in The Exorcist, 
+                                     Satan returned with a vengeance and since then films about demonic possession have fascinated viewers worldwide. This documentary will reveal a Biblical perspective.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img alt="Science & Faith" src={require("../assets/images/scienceFaith.png")} style={{height: "250px"}} />
+                                </td>
+
+                                <td>
+                                    <strong>SCIENCE & FAITH</strong> Can Science and Religion coexist? For years this question has divided people into two camps: those who look for answers to the “what, how, and when” questions, and others who seek to understand the “why.”
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img alt="Pain Killers" src={require("../assets/images/painKillers.png")} style={{height: "250px"}} />
+                                </td>
+
+                                <td>
+                                    <strong>PAIN KILLERS </strong> In one year, they’ve claimed the lives of more than 16,000 people in the United States. They’ve stolen identities, broken families, and led to life changing addictions. And they are likely sitting in your medicine cabinet this very moment.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img alt="Youth Under Fire" src={require("../assets/images/underFire.png")} style={{height: "250px"}} />
+                                </td>
+
+                                <td>
+                                    <strong> YOUTH UNDER FIRE</strong> It has been 20 years since the Columbine High School mass shooting, a tragedy that, at the time, was the worst school shooting in U.S. history.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img alt="Inside Teen Suicide" src={require("../assets/images/teenSuicide.png")} style={{height: "250px"}} />
+                                </td>
+
+                                <td>
+                                    <strong>INSIDE TEEN SUICIDE</strong> Inside Teen Suicide features six riveting personal stories told through raw, gripping visuals, and looks at the root causes of teen suicide in our modern world.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img alt="Sex Messages" src={require("../assets/images/sexMessages.png")} style={{height: "250px"}} />
+                                </td>
+
+                                <td>
+                                    <strong>SEX MESSAGES</strong> Sex sells. This simple idea propels billions of dollars in advertising and media content revenue every year and is a driving force in shaping youth culture today.
+                                </td>
+                            </tr>
                         </tbody>
                     </ThreeTable>
 
@@ -1627,17 +1799,18 @@ const PrayerBinder = () => {
                 <Accordion.Header>4 - BROCHURES</Accordion.Header>
                 <Accordion.Body>
                     <p className='m-3'>
-                    <Blueish><u>ADDICTIONS</u></Blueish> - Addictions, regardless of whether it is alcoholism, drugs, pornography or any other vice – 
-                    the feeling of being trapped and out-of-control is overwhelming, almost unbearable. Addictions are painful.
-                    In the first three gospel accounts in the Bible, Jesus met a man whose life was messed up. So much so,
-                    that he was actually out of his mind. After an encounter with Jesus, he was set free, delivered and made whole.
-                    Jesus is your hope from anything and everything, He can set you free.   Freedom from Addictions  
+                    <Blueish><u>ADDICTIONS</u></Blueish> - Addictions, regardless of whether it is alcoholism, drugs,
+                     pornography or any other vice – the feeling of being trapped and out-of-control is overwhelming,
+                      almost unbearable. Addictions are painful. In the first three gospel accounts in the Bible,
+                       Jesus met a man whose life was a “mess”. So much so, that he was completely out of control.
+                        After an encounter with Jesus, he was set free, delivered, and made whole. Jesus is your HOPE. 
+                     He can set you free from anything and everything that seeks to destroy your peace and well-being.  
                     </p>
 
                     <ol>
                         <li><Redish>Confession</Redish> – admitting your sin</li>
                         <li><Blueish>Renunciation</Blueish> – by the grace of God I don’t ever want to participate in that sin again</li>
-                        <li><Redish>Accountability</Redish> – confess your sins to God and, in humility, to another person as well</li>
+                        <li><Redish>Accountability</Redish> – confess your sins to God and, in humility, to another (safe) person as well</li>
                         <li><Blueish>Healing</Blueish> – God will come through for you with His strength to overcome</li>
                     </ol>
 
@@ -1657,13 +1830,11 @@ const PrayerBinder = () => {
                         but whoever confesses and renounces them finds mercy” (Proverbs 28:13).  
                         “… Confess your sins to each other and pray for each other so that you may be healed” (James 5:16).   “ … We take captive every thought to make it obedient to Christ” (2 Corinthians 10:5). <br/>  
 
-                        <strong>Resources:</strong> <a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> <a href= "https://www.celebraterecovery.ca" style={{color: "#178B96"}}>www.celebraterecovery.ca;</a>  
-                         <a href= "https://www.celebraterecovery.com" style={{color: "#178B96"}}>www.celebraterecovery.com;</a> <a href= "https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca;</a> <br />
-                        
-                        <Redish>Prayer Line 1-866-273-4444  </Redish> 
+                        <strong>Resources: </strong> 
+                         100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br/><a target="_blank" href= "https://www.celebraterecovery.ca" style={{color: "#178B96"}}> www.celebraterecovery.ca;
+                        </a> <a target="_blank" href= "https://www.celebraterecovery.com" style={{color: "#178B96"}}>www.celebraterecovery.com;</a> <a target="_blank" href= "https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca;</a>  
+                        <Redish> Prayer Line 1-866-273-4444  </Redish> 
                     </p>
-
-                    
 
                     <p className='m-3'>
                         <Blueish><u>EMOTIONAL NEEDS</u></Blueish> - “Dear friend, I pray that you may enjoy good health and that all may go well with you, even as your soul is getting along well” (3 John 2).
@@ -1680,10 +1851,9 @@ const PrayerBinder = () => {
                         <Blueish><strong>Scriptures of Promise:</strong></Blueish> “Do not be anxious about anything, but in everything, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus” (Philippians 4:6,7).
                         “Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light” (Matthew 11: 28-30).  <br />
 
-                        <strong>Resources:</strong> <a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a>  
-                         <a href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a>  <br/>     
-
-                        Book Suggestion: “Emotionally Free” by Dr Grant Mullen <a href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>   – <Redish>Prayer Line 1-866-273-4444</Redish>
+                        <strong>Resources: </strong> 
+                        100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                        <a target="_blank" href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a> Book Suggestion: “Emotionally Free” by Dr Grant Mullen <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>   – <Redish>Prayer Line 1-866-273-4444</Redish>
                     </p>
 
                     <p className='m-3'>
@@ -1697,10 +1867,9 @@ const PrayerBinder = () => {
                         <Redish><strong>Prayer:</strong></Redish> Heavenly Father, I thank you that according to Romans 12:3 you have given each one a “measure of faith”. Today, I ask for a believing heart to trust you more. Help me to receive your Word in faith so that it will transform my mind and increase my faith. In Jesus Name I pray, Amen.<br />   
                         <Blueish><strong>Scriptures of Promise:</strong></Blueish> “And without faith it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him” (Hebrews 11:6).   “Now unto Him who is able to do immeasurably more than all we ask or imagine according to His power that is at work within us” (Ephesians 3:20). <br />    
                        
-                        <strong>Resources:</strong> <a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> 
-                         <a href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a>  <br/>     
-
-                        Book Suggestion: “Christ for Real” by Charles Price   <a href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>   – <Redish>Prayer Line 1-866-273-4444</Redish>
+                        <strong>Resources: </strong> 
+                        100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                         <a target="_blank" href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a>  Book Suggestion: “Christ for Real” by Charles Price   <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>   – <Redish>Prayer Line 1-866-273-4444</Redish>
                     </p>
 
                     <p className='m-3'>
@@ -1708,10 +1877,9 @@ const PrayerBinder = () => {
                         <Redish><strong>Prayer:</strong></Redish> Dear God, you know what I have need. Please give me wisdom and strength so that I do not seek to purchase what I cannot afford. Help me in my planning so that I will not be in debt to anyone. May I keep in check what I desire, be content with what I have, and trust you for the rest. <br/>
                         <Blueish><strong>Scriptures of Promise:</strong></Blueish> “Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength” (Mark 12:29-31).   “Bring the whole tithe into the storehouse, that there may be food in my house. Test me in this, says the Lord Almighty, and see if I will not throw open the floodgates of heaven and pour out so much blessing that you will not have room enough for it”(Malachi 3:8-11).   “Do not worry then, saying, ‘What will we eat?’ or ‘What will we drink?’ or ‘What will we wear for clothing?’ For the Gentiles eagerly seek all these things; for your heavenly Father knows that you need all these things. But seek first His kingdom and His righteousness, and all these things will be added to you” (Matthew 6:31-33).<br/>
                         
-                        <strong>Resources:</strong> <a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> 
-                        <a href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a>  <br/>     
-
-                        Book Suggestion: “Christ for Real” by Charles Price   <a href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>   – <Redish>Prayer Line 1-866-273-4444</Redish>
+                        <strong>Resources: </strong>
+                        100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                        <a target="_blank" href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com</a>  Book Suggestion: “Christ for Real” by Charles Price   <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>   – <Redish>Prayer Line 1-866-273-4444</Redish>
                     </p>
 
                     <p className="m-3">
@@ -1725,8 +1893,8 @@ const PrayerBinder = () => {
                         <Redish><strong>Prayer:</strong></Redish> “Dear God, thank you for your gift of Jesus and His death for my sins. I acknowledge that I have sinned and am in desperate need of forgiveness. Please forgive me. In obedience to your word, I choose to forgive those who have sinned against me.  I rejoice today for you have helped me to find freedom through forgiveness”.   <br />
                         <Blueish><strong>Scripture of Promises:</strong></Blueish>  “And when you stand praying, if you hold anything against anyone, forgive him, so that your Father in heaven may forgive you your sins” (Mark 11:25).   “Bear with each other and forgive whatever grievances you may have against one another. Forgive as the Lord forgave you. In whom we have redemption, the forgiveness of sins” (Colossians 3:13.14).   <br />
                         
-                        <strong>Resources:</strong> <a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> Book
-                        Suggestion: “Landmines” by Charles Stanley  <a href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>  
+                        <strong>Resources: </strong> 100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br/>
+                         Book Suggestion: “Landmines” by Charles Stanley  <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}>www.crossroads.ca</a>  
                         – <Redish>Prayer Line 1-866-273-4444</Redish>
                     </p>
 
@@ -1750,8 +1918,9 @@ const PrayerBinder = () => {
 
                     <Blueish><strong>Scriptures of Promise:</strong></Blueish> “Take delight in the Lord, and he will give you your heart’s desires” (Psalm 37:3,4).   “The Lord will guide you along the best pathway for your life. He will advise you and watch over you”   (Psalm 32:8).   “The Lord directs the steps of the godly. He delights in every detail of their lives” (Psalm 37:23).    “Trust in the Lord with all your heart; do not depend on your own understanding. Seek his will in all you do, and he will show you which path to take” (Proverbs 3:5,6).   “Your word is a lamp to guide my feet and a light for my path” (Psalm 119:105).   <br />
 
-                    <strong>Resources:</strong><a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> Book 
-                    Suggestion: “Moving Mountains: Praying with Passion, Confidence and Authority by John Eldredge  <a href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
+                    <strong>Resources: </strong>
+                    100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                     Book Suggestion: “Moving Mountains: Praying with Passion, Confidence and Authority by John Eldredge  <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
                     – <Redish>Prayer Line 1-866-273-4444</Redish>
                     </p>
 
@@ -1761,8 +1930,9 @@ const PrayerBinder = () => {
                         <br /><Redish><strong>Prayer:</strong></Redish> Heavenly Father, in Jesus Name, I come boldly to your throne of grace to receive healing from (specify condition for which you are seeking healing). I believe that through the sacrifice of Jesus on the Cross you have provided my total healing and I declare that by the stripes of Jesus, I am healed. I also pray, Father, that any doctor who may be attending to me will be filled with your divine wisdom and ability. Lord, may your grace be poured out upon me even now. By faith I believe your promise of Jeremiah 30:17, “For I will restore health to you and heal you of your wounds”. In Jesus Name I pray, Amen. 
                         <br /><Blueish><strong>Scriptures of Promise:</strong></Blueish> “Praise the LORD, my soul, and forget not all his benefits— who forgives all your sins and heals all your diseases” (Psalm 103:2-3).   “Heal me, LORD, and I will be healed; save me and I will be saved, for you are the one I praise” (Jeremiah 17:14).  <br />
 
-                        <strong>Resources:</strong><a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> Book
-                        Suggestion: “When You Need A Miracle” by Linda Shepherd  <a href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
+                        <strong>Resources: </strong>
+                        100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                        Book Suggestion: “When You Need A Miracle” by Linda Shepherd  <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
                         – <Redish>Prayer Line 1-866-273-4444</Redish>
                     </p>
 
@@ -1770,8 +1940,9 @@ const PrayerBinder = () => {
                         <Blueish><u>HOPE</u></Blueish> - Have you ever felt alone and forgotten – even thought to yourself, “God does not care about me anymore?” Has someone of significance in your life simply walked away? Maybe your dreams have been dashed and your heart crushed? If this describes you today, allow me to encourage you – there is HOPE. God is your hope.   Truth   The Psalmist David has felt the way that you feel. Psalm 42 and 43 give us insight into his despair. He describes his frame of mind as discouraged, downcast and sad.  He says he feels sorrow pouring over him like a waterfall. Even his bones ache. David describes perplexity in his mind. He likens it to a flood of sorrow. He is utterly overwhelmed and in deep despair. At one time or another, we have all felt this way – life has overwhelmed us and our courage to face tomorrow has disappeared. The Psalmist gives us instruction as to what he did when his world collapsed and how he recovered from his hopelessness. He advises, “We put our hope in the Lord. He is our help and our shield. In him our hearts rejoice, for we trust in his holy name. Let your unfailing love surround us, Lord, for our hope is in you alone” (Psalm 33:20-22). David’s rock was God. The Lord was his refuge and his deliverer, He kept HOPING in the Lord.   
                         <br /> <Redish><strong>Prayer:</strong></Redish> Dear God, I have lost my hope for tomorrow and my courage has slipped away. Your Word says that you will never fail me, never abandon me or reject me. Today I choose to hope in your goodness. Please restore, renew and refresh my life. I ask you to become my Rock, my refuge, my salvation, and my deliverer. In you I put my trust!   
                         <br /> <Blueish><strong>Scriptures of Promise:</strong></Blueish> “I prayed to the Lord, and He answered me. He freed me from all my fears” (Psalm 34:4).   “Lead me by your truth and teach me, for you are the God who saves me. All day long I put my hope in you” (Psalm 25:5).   “Why am I discouraged? Why is my heart so sad? I will put my hope in God! I will praise him again— my Savior and my God!” (Psalm 42:11).   “When doubts filled my mind, your comfort gave me renewed hope and cheer” (Psalm 94:19).   “There is hope for your future” says the LORD …” (Jeremiah 31:17). 
-                        <br /> <strong>Resources:</strong><a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> Book
-                        Suggestion: “When You Need A Miracle” by Linda Shepherd  <a href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
+                        <br /> <strong>Resources: </strong>
+                        100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                        Book Suggestion: “When You Need A Miracle” by Linda Shepherd  <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
                         – <Redish>Prayer Line 1-866-273-4444</Redish>    
                     </p>
 
@@ -1793,7 +1964,7 @@ const PrayerBinder = () => {
                         <li><Blueish>The Bible must be the only foundation for all beliefs </Blueish> (Psalm 119:89, Matthew 24:35).</li>
                     </ul>
 
-                    <p><strong>BEWARE OF:</strong></p>
+                    <p><strong>BEWARE OF: </strong></p>
 
                     <ul>
                         <li><Redish>Overemphasis on any points of doctrine</Redish></li>
@@ -1805,12 +1976,12 @@ const PrayerBinder = () => {
                         You may also want to search out a church that offers the “Alpha” course.
                         This course teaches the foundations of the Christian faith in a small relaxed group setting 
                         <Redish>Phone: 1-800-743-0899.</Redish> 
-                        On-line <a href="http://www.alphacanada.org" style={{color: "#178B96"}}>www.alphacanada.org</a>
-                        <a href="http://www.alphausa.org" style={{color: "#178B96"}}>www.alphausa.org</a>  
+                        On-line <a target="_blank" href="http://www.alphacanada.org" style={{color: "#178B96"}}>www.alphacanada.org
+                        </a> <a target="_blank" href="http://www.alphausa.org" style={{color: "#178B96"}}>www.alphausa.org 
                         
-                        <Blueish><strong>Sciptures of Promise:</strong></Blueish> “And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together,
+                        </a>  <Blueish><strong>Sciptures of Promise:</strong></Blueish> “And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together,
                         as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching” (Hebrews 10:24-25).
-                        <a href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
+                        <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
                         – <Redish>Prayer Line 1-866-273-4444</Redish>    
                     </p>
 
@@ -1832,10 +2003,10 @@ const PrayerBinder = () => {
                     <p className='m-2'>
                     …. just to name a few. So the question remains, HOW do we find peace when life hands us lemons – when circumstances are chronically disappointing, when even our lemons are rotten? First of all, peace comes when we receive forgiveness for our sins; then as we turn each of our unsolvable situations into God’s hands and simply trust Him, we begin to understand the scripture, “Be still and know that I am God” (Psalm 46:10).  God is good and He is faithful.   Prayer   Dear God, I desire to walk in the peace that Jesus died on the cross for me to have. Help me to identify the “peace stealers” in my life and give me the strength, determination and commitment to make a change. I release all my fears, concerns, my schedule and my life over to You.   Scriptures of Promise   “Don’t worry about anything; instead, pray about everything. Tell God what you need, and thank him for all he has done. Then you will experience God’s peace, which exceeds anything we can understand. His peace will guard your hearts and minds as you live in Christ Jesus” (Philippians 4:6.7).    “Now may the Lord of peace Himself give you His peace at all times and in every situation”   (2 Thessalonians 3:16).   “I am leaving you with a gift—peace of mind and heart. And the peace I give is a gift the world cannot give. So don’t be troubled or afraid” (John 14:27).     
                     
-                        <br /> <strong>Resources:</strong> 
-                        <a href="https://www.100huntley.com" style={{color: "#178B96"}}> www.100huntley.com;</a> 
-                        <a href="https://www.drgrantmullen.com" style={{color: "#178B96"}}> www.drgrantmullen.com;</a> 
-                        <a href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
+                        <br /> <strong>Resources: </strong> 
+                        100 Huntley Street Resources & Topic Index video library at: <a target="_blank" href="http://100hs.ca/topic" style={{color: "#178B96"}}> http://100hs.ca/topic; </a> <br />
+                         <a target="_blank" href="https://www.drgrantmullen.com" style={{color: "#178B96"}}>www.drgrantmullen.com;
+                        </a> <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a>
                         – <Redish>Prayer Line 1-866-273-4444</Redish> 
                      </p>
                 </Accordion.Body>
@@ -1845,7 +2016,7 @@ const PrayerBinder = () => {
                 <Accordion.Header>5A - HOLY SPIRIT MODULE</Accordion.Header>
                 <Accordion.Body>
                     <p className='m-3'>
-                        <Blueish><u><strong>MODULE FROM THE PRAYER PARTNER TRAINING MANUAL</strong></u></Blueish> - <Redish><strong>Feb. 28, 2012</strong></Redish>  - <strong>The Work of the Holy Spirit</strong> God desires for believers to receive His gifts. These gifts come to us freely by God’s grace, to empower us to carry on the supernatural aspects of the ministry of Jesus Christ. (John 14:12) This means that ultimately, the Lord Jesus, not the individual, is the one who is acknowledged by the exercise of the gift. Help is to come from the Lord and we are simply His vessels. Acts 1:8 makes it clear that the purpose of the infilling of the Holy Spirit is to empower us to witness and proclaim the gospel boldly. “But you shall receive power when the Holy Spirit has come upon you; and you shall be witnesses to Me in Jerusalem, and in all Judea and Samaria, and to the end of the earth.” (Also see Acts1: 5) Being filled with the Holy Spirit is a step through a doorway into a new realm of Spirit-filled living in which we are able to walk daily. (Eph. 5:18; Gal.5: 25) All those who minister on the telephones should make it their goal to grow continually in their personal walk with God and to covet all of the gifts God desires to give His children. 
+                        <Blueish><u><strong>MODULE FROM THE PRAYER PARTNER TRAINING MANUAL</strong></u></Blueish> - <strong>The Work of the Holy Spirit</strong> God desires for believers to receive His gifts. These gifts come to us freely by God’s grace, to empower us to carry on the supernatural aspects of the ministry of Jesus Christ. (John 14:12) This means that ultimately, the Lord Jesus, not the individual, is the one who is acknowledged by the exercise of the gift. Help is to come from the Lord and we are simply His vessels. Acts 1:8 makes it clear that the purpose of the infilling of the Holy Spirit is to empower us to witness and proclaim the gospel boldly. “But you shall receive power when the Holy Spirit has come upon you; and you shall be witnesses to Me in Jerusalem, and in all Judea and Samaria, and to the end of the earth.” (Also see Acts1: 5) Being filled with the Holy Spirit is a step through a doorway into a new realm of Spirit-filled living in which we are able to walk daily. (Eph. 5:18; Gal.5: 25) All those who minister on the telephones should make it their goal to grow continually in their personal walk with God and to covet all of the gifts God desires to give His children. 
                         <br/>
                         <strong>There seem to be two main views concerning the Baptism of the Holy Spirit:</strong> There are those who believe that it refers to the Holy Spirit coming into a person’s heart at the moment of salvation and generally this view is that the work of the Spirit is complete at the point of salvation. Others believe that a person automatically receives the Holy Spirit at the moment of salvation, but they say that the “baptism” of the Holy Spirit is a separate event, which is usually accompanied by the outward evidence of being able to pray in tongues. This subject should not be a dividing issue within the body of Christ. In the spirit of unity, as believers, please do not argue or debate your belief, but instead focus on praying that the Holy Spirit will reveal Himself to the caller and lead them into His truth.
 
@@ -1890,13 +2061,23 @@ const PrayerBinder = () => {
                         <img src={require("../assets/images/5bimage.png")} alt="discover-jesus-tree" />
                     </Banner>
                     <p className='m-3'>
-                        <strong>Discover The Gospel of Jesus Christ God Loves You – John 3:16</strong> For God so loved the world that He gave His only begotten Son, that whoever believes in Him would not perish but have everlasting life.   You Are a Sinner – Romans 3:23 For all have sinned and fall short of the glory of God.   Jesus Christ is Your Answer – John 11:25-26 Jesus said to her, “I am the resurrection and the life. He who believes in Me, though he may die, he shall live. And whoever lives and believes in Me shall never die. Do you believe this?”   God’s Grace Is Sufficient – Ephesians 2:8-9 By grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, lest anyone should boast.   Repentance Is Necessary – 1 John 1:9 If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.   Faith Is the Key to Eternal Life – 1 John 5:13 These things I have written to you who believe in the name of the Son of God, that you may know that you have eternal life.   Peace Is the Result – Romans 5:1-2 Therefore, having been justified by faith, we have peace with God through our Lord Jesus Christ, through whom also we have access by faith into this grace in which we stand, and rejoice in hope of the glory of God.   
+                        <strong><Blueish>Discover The Gospel of Jesus Christ</Blueish> God Loves You – John 3:16</strong> For God so loved the world that He gave His only begotten Son, that whoever believes in Him would not perish but have everlasting life. 
+                        <strong> You Are a Sinner – Romans 3:23</strong> For all have sinned and fall short of the glory of God. <strong>   Jesus Christ is Your Answer – John 11:25-26 </strong> Jesus said to her, “I am the resurrection and the life. He who believes in Me, though he may die, he shall live. And whoever lives and believes in Me shall never die. Do you believe this?”
+                         <strong> God’s Grace Is Sufficient – Ephesians 2:8-9</strong> By grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, lest anyone should boast. 
+                         <strong>  Repentance Is Necessary – 1 John 1:9 </strong> If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness. 
+                         <strong> Faith Is the Key to Eternal Life – 1 John 5:13</strong>  These things I have written to you who believe in the name of the Son of God, that you may know that you have eternal life. 
+                         <strong> Peace Is the Result – Romans 5:1-2</strong>  Therefore, having been justified by faith, we have peace with God through our Lord Jesus Christ, through whom also we have access by faith into this grace in which we stand, and rejoice in hope of the glory of God.   
                     
-                        <br />
+                        <br /><br/>
                         <strong>How Will You Respond?:</strong> Would you like to respond to God’s gift of Salvation? Invite Jesus into your life as your Lord and Saviour, through the following prayer: “Lord Jesus, thank you for dying on the cross for my sins. I open my life and receive you now as my Saviour and Lord. Please forgive my sins. I accept your peace, forgiveness and your gift of eternal life. Amen.”      
                     
-                        <br />
-                        <strong>A New Beginning:</strong> This is a new beginning in your relationship with our Lord, Jesus Christ. God bless you in making this vital and life changing decision. God wants you to enjoy the many blessings that He has made available to you through His Son Jesus. May God richly bless you in your new venture with Christ. Remember to always put your faith in Him, day by day. He is there to provide guidance, strength, wisdom, provision and help in times of need. If you have not already done so, we encourage you to check out our topical videos on 100huntley.com. Crossroads is happy to help. In fact, that’s the whole reason we exist as a ministry. We would like to send you a letter of encouragement to help you with your walk in the Lord. If you wish to receive this encouragement, please give us your name and address and/or email address and we will mail/email this to you. Also, the daily <strong>100 Huntley Street</strong> telecast and the 24-hour-a-day telephone prayer lines are available for the same reason. God loves you and we love you too!
+                        <br /><br/>
+                        <strong>A New Beginning:</strong> This is a new beginning in your relationship with our Lord, Jesus Christ. God bless you in making this vital and life changing decision. God wants you to enjoy the many blessings that He has made available to you through His Son Jesus. May God richly bless you in your new venture with Christ. Remember to always put your faith in Him, day by day. He is there to provide guidance, strength, wisdom, provision and help in times of need.
+                         If you have not already done so, we encourage you to check out our ministry websites with helpful and encouraging media content at
+                         <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}> www.crossroads.ca</a> <a target="_blank" href="https://100hs.ca/topic" style={{color: "#178B96"}}>https://100hs.ca/topic</a><br/>
+                         Crossroads is happy to help. In fact, that’s the whole reason we exist as a ministry. We would like to send you a letter of encouragement to help you with your walk in the Lord. If you wish to receive this encouragement, please give us your name and address and/or email address and we will mail/email this to you. Also, the daily <strong>100 Huntley Street</strong> telecast (see <a target="_blank" href="https://100hs.ca" style={{color: "#178B96"}}>100hs.ca</a>)
+                         and the 24-hour-a-day telephone prayer lines are available for the same reason. 
+                         <Redish>God loves you and we love you too!</Redish>
                     </p>
                 </Accordion.Body>
             </Accordion.Item>
@@ -1974,7 +2155,7 @@ const PrayerBinder = () => {
                                         <li>Discern, use wisdom, and be polite when it is time to transition to pray or bring the call to an end.</li>
                                     </ul>
                                     <Redish><strong>Suggestions:</strong></Redish> “The Lord is well able to work this out, so let’s go to prayer now.
-                                    ” “I need to take another call, so let’s just leave this in the hands of the Lord to work it out. 
+                                    ” <br/>“I need to take another call, so let’s just leave this in the hands of the Lord to work it out. 
                                     We’ll also pray over your request for the next seven days. God bless you!”  
 
                                 </td>
@@ -2056,11 +2237,13 @@ const PrayerBinder = () => {
                                     <ul>
                                         <li>To represent Crossroads Ministry in a professional manner.</li>
                                         <li>To convey to the caller that we welcome their call.</li>
+                                        <li>You may wish to use an alias on the prayer lines. E.g. You can choose to use a favourite name or your middle name for anonymity.</li>
                                     </ul>
                                 </td>
                                 <td>
                                     <ul>
                                         <li>
+                                            <Redish>Suggested greeting:  </Redish><br/>
                                             “Good morning/afternoon/night, thank you for calling the Prayer Line.
                                             How may I pray for you?” “Thank you for calling the Prayer Line.  My name is  _____________   . 
                                             How may I pray for you?” (Including your name in the greeting invites the caller to spontaneously give his/her name. 
@@ -2193,6 +2376,28 @@ const PrayerBinder = () => {
                                     </ul>
                                 </td>
                             </tr>
+                            <tr>
+                                <td className='text-center'>
+                                    <strong>GIVING ADVICE OR OPINION</strong>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Don’t give specific directions as to what to do in the situation.</li>
+                                        <li>Don’t make decisions for a caller. </li>
+                                        <li>Don’t pray your advice and give the caller the impression that you are praying God’s will. </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Be aware of the legal concerns:  Crossroads and the Prayer Partner could be legally liable for specific advice or instructions given to a caller. </li>
+                                        <li>Pray, give the caller God’s Word, then leave them in God’s hands to guide, direct, and work in their hearts and lives.</li>
+                                        <li>Encourage the caller to wait on the Lord. </li>
+                                        <li>Suggest resources and referrals.</li>
+                                        <li>Remember that good advice is seldom followed anyway.</li>
+                                        <li>The Bible exhorts: “Let your words be few.” (Eccl 5:2)</li>
+                                    </ul>
+                                </td>
+                            </tr>
 
                             <tr>
                                 <td className='text-center'>
@@ -2309,7 +2514,7 @@ const PrayerBinder = () => {
                         <li>If a caller comments that other prayer partners have given them more time on the prayer lines, graciously respond with a statement like, “That’s not our standard practice. How can I pray for you?”</li>
                         <li>Attempts to take control of a call should begin after two to three <strong>(2-3)</strong> minutes of listening. You may say, 
                         “ _____________    , let’s take your requests(s) before the Lord in prayer.”  Or “Your Heavenly Father knows your need(s) before you ask; let’s enter His Presence in prayer now”.  If the caller continues speaking, politely repeat the statement indicating that you must go to prayer now.</li>
-                        <li>Remain consistent with your call lengths; whether or not calls are waiting in the <strong>THRIO</strong> Call Centre queue.
+                        <li>Remain consistent with your call lengths; whether or not calls are waiting in the <strong>AnyonePray</strong> Call Centre queue.
                             Please take a moment in the <Blueish>“Wrapup”</Blueish> stage between calls to regroup your strength in the Lord and release the call to His “more than able“care. This allows you to prepare for other calls.  This is especially important after a difficult call.  Allow a moment for Holy Spirit to settle your heart and being; you are HIS and you are BELOVED...always.</li>
                     </ul>
 
@@ -2369,7 +2574,7 @@ const PrayerBinder = () => {
 
                         <tr>
                             <td>5. Offer Resources	</td>
-                            <td>If you sense that a caller would be receptive; you may offer resources <strong>(consider</strong>  <a href="https://www.crossroads.ca" style={{color: "#178B96"}}>crossroads.ca</a> <strong>solely, in order to complete the call quickly).</strong>  </td>
+                            <td>If you sense that a caller would be receptive; you may offer resources <strong>(consider</strong>  <a target="_blank" href="https://www.crossroads.ca" style={{color: "#178B96"}}>crossroads.ca</a> <strong>solely, in order to complete the call quickly).</strong>  </td>
                         </tr>
                         </tbody>
                     </EightTable>
@@ -2385,7 +2590,7 @@ const PrayerBinder = () => {
                             <td>
                                 David Mainse began a two-year journey through the Bible with his <strong>100Words</strong> devotional blog.
                                 The daily email posts with Scripture, commentary and photographs are a great inspiration and resource for spiritual growth. 
-                                Please encourage callers with internet service to read and or sign up to receive the blog at  <a href="https://www.100words.ca" style={{color: "#178B96"}}>www.100words.ca </a>
+                                Please encourage callers with internet service to read and or sign up to receive the blog at  <a target="_blank" href="https://www.100words.ca" style={{color: "#178B96"}}>www.100words.ca </a>
                             </td>
                         </tr>
                         <tr>
@@ -2414,7 +2619,7 @@ const PrayerBinder = () => {
 
                             <td>
                                 <ul>
-                                    <li>Keep <a href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a> at the top of your resource list.</li>
+                                    <li>Keep <a target="_blank" href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a> at the top of your resource list.</li>
                                     <li>Do not forget our email mentoring program!</li>
                                     <li>Check the <strong>Resource List</strong> provided for other sources.</li>
                                     <li>We can mail out literature or brochures to callers without internet access.  Please familiarize yourself with these options.</li>
@@ -2439,7 +2644,7 @@ const PrayerBinder = () => {
                         <li>Pastoral call-backs for reasons other than those stated above, are rarely available.</li>
                         <li>The <strong>Resources</strong> list that we have compiled, will in most instances, contain the information that Prayer Partners need to provide immediate assistance for callers who may need additional supports.</li>
                         <li>For callers who request further spiritual care, please encourage them to connect with a local church, and if appropriate, a Christian counsellor<strong>(please refer to Resources list under the subtitle, Emotional…Counselling Supports)</strong> .</li>
-                        <li>Remember to mention <a href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>, and <a href="https://www.intothecastle.com" style={{color: "#178B96"}}>www.intothecastle.com</a> which are our primary follow-up connections. These websites feature a wealth of information, testimonies and other resources that will continue to inspire and equip callers of all ages and stages.</li>
+                        <li>Remember to mention <a target="_blank" href="https://www.100huntley.com" style={{color: "#178B96"}}>www.100huntley.com</a>, and <a target="_blank" href="https://www.intothecastle.com" style={{color: "#178B96"}}>www.intothecastle.com</a> which are our primary follow-up connections. These websites feature a wealth of information, testimonies and other resources that will continue to inspire and equip callers of all ages and stages.</li>
                         <li>The Prayer Partner Ministry Response Form is required to initiate the follow-up process for salvation, rededication and church suggestions. The Suicide Report form is required for callers who appear to be intentional about ending their life.  In all cases we require a summary of the caller’s situation to assist us in the follow-up ministry.</li>
                         <li>Please request an email when taking the caller’s contact information, as it gives us an option when we are unable to reach a caller by phone. Please remember to repeat this information back to them.</li>
                     </ul>
@@ -2464,7 +2669,7 @@ const PrayerBinder = () => {
                                      God may be taking the caller through a gentle process of healing; so we respect His timing.</li>
                                 <li>
                                     If the caller does not have a personal relationship with Jesus, share the plan of salvation found in your resource binder. (Please remember that if the caller accepts Christ, complete a <Blueish><strong>“Ministry Response Form”</strong></Blueish> and 
-                                    submit it to the office or <a href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a>   Also,
+                                    submit it to the office or <a target="_blank" href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a>   Also,
                                     If the caller does not have a local Church, complete a <Blueish><strong>“Ministry Response Form”</strong></Blueish>, as noted above.)
                                 </li>
                             </ul>
@@ -2489,7 +2694,7 @@ const PrayerBinder = () => {
                             <ul>
                                 <li>
                                 Should the caller not have these resources, offer a pastoral callback for follow-up.
-                                 Complete a “Ministry Response Form”; submit to <a href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a>
+                                 Complete a “Ministry Response Form”; submit to <a target="_blank" href="mailto:nmcstats@crossroads.ca" style={{color: "#178B96"}}>nmcstats@crossroads.ca</a>
                                 </li>
                             </ul>
                         </li>
@@ -2583,32 +2788,32 @@ const PrayerBinder = () => {
                             <tr>
                                 <td className='p-4'><strong>PRAYER</strong></td>
                                 <td><strong>CASUAL CONVERSATIONS</strong></td>
-                                <td><strong>ADVICE OPINION COUNSELLING</strong></td>
+                                <td><strong>ADVICE<br/> OPINION <br/> COUNSELLING</strong></td>
                             </tr>
 
                             <tr>
                                 <td className='p-4'><strong>THE WORD OF GOD</strong></td>
                                 <td><strong>COMMENTS</strong></td>
-                                <td><strong>PREACHING TEACHING DOCTRINAL VIEWS</strong></td>
+                                <td><strong>PREACHING<br/> TEACHING<br/> DOCTRINAL VIEWS</strong></td>
                             </tr>
                             
                             <tr>
                                 <td className='p-4'><strong>FAITH IN GOD’S POWER</strong></td>
                                 <td><strong>SHARING EXPERIENCES STORYTELLING (YOURS & THE CALLER’S)</strong></td>
-                                <td><strong>PROBLEM SOLVING PERSUASION</strong></td>
+                                <td><strong>PROBLEM<br/> SOLVING PERSUASION</strong></td>
                             </tr>
 
                             <tr>
                                 <td className='p-4'><strong>CARE RESOURCES & REFERRALS</strong></td>
                                 <td><strong>QUESTIONING (EXCEPT SUICIDAL CALLERS)</strong></td>
-                                <td><strong>JUDGEMENT DEPENDENCY</strong></td>
+                                <td><strong>JUDGEMENT<br/> DEPENDENCY</strong></td>
                             </tr>
                         </tbody>
                     </SixTable>
                     <p className='text-center p-2'><Redish>“So that your faith might not rest in with wisdom of men but in the power of God.” 1 Corinthians 2:5 (ESV)</Redish></p>
                 </Accordion.Body>
             </Accordion.Item>
-
+{/* The “Bible Materials” page acts like a 
             <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="17">
                 <Accordion.Header> 10B - MINISTRY RESPONSE FORM</Accordion.Header>
                 <Accordion.Body>
@@ -2617,12 +2822,6 @@ const PrayerBinder = () => {
                     style={{width:"100%", minHeight:"750px"}} ></iframe>
                 </Accordion.Body>
             </Accordion.Item>
-{/* 
-            <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="18">
-                <Accordion.Header> 10C - PRAYER FORM</Accordion.Header>
-                <Accordion.Body>
-                </Accordion.Body>
-            </Accordion.Item> */}
 
             <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="18">
                 <Accordion.Header> 10C - SUICIDE REPORT</Accordion.Header>
@@ -2632,12 +2831,6 @@ const PrayerBinder = () => {
                     style={{width:"100%", minHeight:"750px"}} ></iframe>
                 </Accordion.Body>
             </Accordion.Item>
-
-            {/* <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="20">
-                <Accordion.Header> 10E - PRAYER PARTNER INFORMATION FORM</Accordion.Header>
-                <Accordion.Body>
-                </Accordion.Body>
-            </Accordion.Item> */}
 
             <Accordion.Item className="p-1" style={{borderBottom: "0"}} eventKey="19">
                 <Accordion.Header> 10D - STATEMENT OF FAITH</Accordion.Header>
@@ -2666,7 +2859,7 @@ const PrayerBinder = () => {
                
                 </Accordion.Body>
             </Accordion.Item>
-
+*/}
             
         </Accordion>
     </Wrapper>

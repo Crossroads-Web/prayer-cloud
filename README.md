@@ -14,6 +14,7 @@ Where the Magic happens
  # scr/components
  React web apps are a combination of reusable components, this folder would contain all these components
 
+
  # contexts
  Using the createContext and useContext react hooks, variables and data are accessible to the components that use this contexts
  eg CallForm.js AKA CallForm Component would use CallForm Context

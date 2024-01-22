@@ -36,8 +36,8 @@ const BibleMaterials = () => {
             // Get the Source column and add to the body
             return '<div class="content-body">' +
               // <pre> in theory will respect indenting, like in Psalms
-              '<pre class="txt-pre m-3">' + data + '<br>– ' + row[1] + '</pre>' +
-              // '<button class="btn-copy btn-sm btn btn-outline-info" data-clipboard-text="' +data + ' – ' + row[1] + '">Copy</button>' +
+              '<pre class="txt-pre m-3">' + data + '<br>– ' + row[1] + '</pre>' +              
+             //'<button class="btn-copy btn-sm btn btn-outline-info" data-clipboard-text="'+data + ' – ' + row[1] + '">Copy</button>' +
             '</div>';
           },
           "targets": 0
@@ -114,7 +114,7 @@ const BibleMaterials = () => {
 },[]);
 
   return (
-    <Wrapper className='mb-5'>
+    <Wrapper className='row mt-5 mb-5'>
         <Header className="mb-4 p-2 mt-4">Bible Materials</Header>
   
         <p className="text-center m-0">Start a search to find verses, prayers, and other Bible based materials.</p>

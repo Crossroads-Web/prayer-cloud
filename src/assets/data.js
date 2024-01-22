@@ -69,34 +69,29 @@ export const callTypes = [
 export const followUpTypes = [
     {
         id: 1,
-        type: "Salvation",
+        type: "Salvation/Rededication",
         key: 1
     },
     {
         id: 2,
-        type: "Answer to Prayer",
+        type: "Literature/Christian Growth Materials",
         key: 2
     },
     {
         id: 3,
-        type: "Literature",
+        type: "Walk of Faith",
         key: 3
     },
     {
         id: 4,
-        type: "Rededication",
+        type: "Church Referrals",
         key: 4
     },
     {
         id: 5,
-        type: "Ongoing Prayer",
-        key: 5
+        type: "Suicide Call",
+        key: 4
     },
-    {
-        id: 6,
-        type: "Referrals"
-    }
-    
 ]
 
 export const dispositions = [
@@ -175,14 +170,14 @@ export const resources = [
     {
         id: 9,
         type: "digital",
-        resource: "Healing Personalized Prayer",
-        url: "https://crossroads.ca/prayer-cloud-resources/healing-prayer/"
+        resource: "Discover Jesus...The Plan of Salvation",
+        url: "https://crossroads.ca/prayer-cloud-resources/jesus-the-plan-of-salvation/"
     },
     {
         id: 10,
         type: "digital",
-        resource: "Healing",
-        url: "https://crossroads.ca/prayer-cloud-resources/guidance/"
+        resource: "Discovering Our True Identity As Children of God: A Theological Journey",
+        url: "https://crossroads.ca/prayer-cloud-resources/discovering-our-true-identity/"
     },
     {
         id: 11,
@@ -205,42 +200,87 @@ export const resources = [
     {
         id: 14,
         type: "digital",
-        resource: "Addiction",
+        resource: "Breaking Free From Addiction",
         url: "https://crossroads.ca/prayer-cloud-resources/addictions/"
     },
     {
         id: 15,
         type: "digital",
-        resource: "Emotional Needs",
+        resource: "Emotional Needs and Finding Comfort In God's Word",
         url: "https://crossroads.ca/prayer-cloud-resources/emotional-needs/"
     }, 
     {
         id: 16,
         type: "digital",
-        resource: "Faith",
+        resource: "Finding Strength in God's Promises",
         url: "https://crossroads.ca/prayer-cloud-resources/pray-for-faith/"
     },
     {
         id: 17,
         type: "digital",
-        resource: "Finances",
+        resource: "Navigating Financial Challenges with Wisdom and Faith",
         url: "https://crossroads.ca/prayer-cloud-resources/finances"
     },
     {
         id: 18,
         type: "digital",
-        resource: "Forgiveness",
+        resource: "Finding Freedom Through Forgiveness",
         url: "https://crossroads.ca/prayer-cloud-resources/forgiveness/"
     }, 
     {
         id: 19,
         type: "physical",
-        resource: "Physical test 5"
+        resource: "Steps to Freedom in Christ – Neil A"
     },
     {
         id: 20,
         type: "physical",
-        resource: "Physical Resource 1 - test"
+        resource: "Questions & Answers: Starting Out"
+    },
+    {
+        id: 21,
+        type: "physical",
+        resource: "What if God Wrote Your To-Do List?"
+    },
+    {
+        id: 22,
+        type: "physical",
+        resource: "52 Ways to Make the Most of Every Day"
+    },
+    {
+        id: 23,
+        type: "physical",
+        resource: "Hope in the Midst of Life’s Pain"
+    },
+    {
+        id: 24,
+        type: "physical",
+        resource: "Hope in the Midst of Grief"
+    },
+    {
+        id: 25,
+        type: "physical",
+        resource: "Joy of Prayer"
+    },
+    {
+        id: 26,
+        type: "physical",
+        resource: "John 3:16 – Classic Leather Journal"
+    },
+    {
+        id: 27,
+        type: "physical",
+        resource: "180 Devotional"
+    },
+    {
+        id: 28,
+        type: "physical",
+        resource: "Gospel of John (NLT)"
+    },
+    {
+        id: 29,
+        type: "physical",
+        resource: "The Holy Spirit in God’s People"
     },
 ]
 
@@ -270,11 +310,18 @@ export const blockReasons = [
 export const resourceDelivery = [
     {
         id: 1,
-        via: "Email"
+        text: "Email",
+        value: "email"
     },
     {
         id: 2,
-        via: "SMS (text message)"
+        text: "SMS (text message)",
+        value: "sms"
+    },
+    {
+        id: 3,
+        text: "Mail (physical)",
+        value: "mail",
     }
 ]
 
@@ -293,27 +340,150 @@ export const genders = [
         gender: "Prefer not to say"
     }
 ]
+export const maritialStatus = [
+    {
+        id: 1,
+        status: "Married"
+    },
+    {
+        id: 2,
+        status: "Single"
+    },
+    {
+        id: 3,
+        status: "Divorced"
+    },
+    {
+        id: 4,
+        status: "Widowed"
+    },
+    {
+        id: 5,
+        status: "Seperated"
+    }
+]
+export const financialStatus = [
+    {
+        id: 1,
+        status: "Employed"
+    },
+    {
+        id: 2,
+        status: "Unemployed"
+    },
+    {
+        id: 3,
+        status: "Secure"
+    },
+    {
+        id: 4,
+        status: "Retired"
+    },
+    {
+        id: 5,
+        status: "No Money"
+    }
+]
+
+
+export const mentalStatus = [
+    {
+        id: 1,
+        status: "Immature"
+    },
+    {
+        id: 2,
+        status: "Apathy"
+    },
+    {
+        id: 3,
+        status: "Sleepy and Difficulty Eating"
+    },
+    {
+        id: 4,
+        status: "Confusion"
+    },
+    {
+        id: 5,
+        status: "Depression"
+    },
+    {
+        id: 6,
+        status: "Hopelessness"
+    },
+    {
+        id: 7,
+        status: "Withdrawal"
+    }
+]
 
 export const ageRanges = [
     {
         id: 1,
-        range: "10-19"
+        range: "Child"
     },
     {
         id: 2,
-        range: "20-29"
+        range: "Teenager"
     },
     {
         id: 3,
-        range: "30-39"
+        range: "Young Adult"
     },
     {
         id: 4,
-        range: "40-49"
+        range: "Adult"
     },
     {
         id: 5,
-        range: "50+"
+        range: "Middle Aged"
+    },
+    {
+        id: 6,
+        range: "Seniors"
     }
 ]
 
+
+export const risksLevels = [
+    {
+        id: 1,
+        level: "1"
+    },
+    {
+        id: 2,
+        level: "2"
+    },
+    {
+        id: 3,
+        level: "3"
+    },
+    {
+        id: 4,
+        level: "4"
+    },
+    {
+        id: 5,
+        level: "5"
+    },
+    {
+        id: 6,
+        level: "6"
+    },
+    {
+        id: 7,
+        level: "7"
+    },
+    {
+        id: 8,
+        level: "8"
+    },
+    {
+        id: 9,
+        level: "9"
+    },
+    {
+        id: 10,
+        level: "10"
+    }
+]

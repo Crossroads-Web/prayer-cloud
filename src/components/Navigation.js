@@ -7,74 +7,55 @@ import { ProfileContext } from '../contexts/ProfileContext'
 const Navigation = () => {
   const { worker } = useContext(ProfileContext);
   return (
-    <Wrapper>
-            <>
-      <Nav className='navbar navbar-expand-lg'>
+    <Wrapper> 
+      <Nav className='navbar navbar-expand-sm'>
         <NavList className='navbar-nav'>
-          {/* <NavItem className="nav-item">
-              <Link activeclassname="active" className='nav-link p-3' to="/">CALL FORM</Link>
-            </NavItem> */}
-
-            {/* ONLY CARE PASTORS CAN VIEW PROFILE*/}
-           {worker && worker.roles.includes('care_person') ?  
-            <NavItem className="nav-item">
-              <Link activeclassname="active" className='nav-link p-3' to="/">ADMIN PROFILE</Link>
-            </NavItem> 
-            :  
-            (<NavItem className="nav-item">
-              <Link activeclassname="active" className='nav-link p-3' to="/">CALL FORM</Link>
-            </NavItem>)
-          }
-
           {worker && worker.routing.skills.includes('Pastoral Care') &&
               <NavItem className="nav-item">
               <Link activeclassname="isActive" className="nav-link p-3" to="/pastoralCare">PASTORAL CARE</Link>
             </NavItem>
           }
-
-          {/* {
-           
-            worker && (worker.roles.includes('wfo.full_access') || worker.roles.includes('admin')) &&
-            <NavItem className="nav-item">
-              <Link activeclassname="active" className='nav-link p-3' to="/profile">ADMIN PROFILE</Link>
-            </NavItem>
-          } 
-           */}
-        
+          <NavItem className="nav-item">
+            <Link activeclassname="active" className='nav-link p-3' to="/">CALL FORM</Link>
+          </NavItem>
           <NavItem className="nav-item">
             <Link activeclassname="isActive" className="nav-link p-3" to="/bibleMaterials">BIBLE MATERIALS</Link>
           </NavItem>
+
           <NavItem className="nav-item">
             <Link activeclassname="isActive" className="nav-link p-3" to="/modelPrayers">MODEL PRAYERS</Link>
           </NavItem>
+
           <NavItem className="nav-item">
             <Link activeclassname="isActive" className="nav-link p-3" to="/prayerBinder">PRAYER BINDER AND SUPPORT</Link>
           </NavItem>
           
         </NavList>
       </Nav>
-
-    </>
-
     </Wrapper>
   );
 }
 const Nav = styled.nav`
-margin: 0;
-padding: 0;
-
+  margin: 0;
+  padding: 0;
 `;
 const NavList = styled.ul`
-    width: 100%;
-    min-height: 100%;
-    display:flex;
-    justify-content: space-between
+   width:100%;
+   min-height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;    
 `;
 const NavItem = styled.li`
-    
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 `;
 
 const Link = styled(NavLink)`
+  display: flex;
+  align-items: center;
+
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 0.2em;
     text-align: center;
@@ -94,6 +75,10 @@ const Link = styled(NavLink)`
 `
 
 const Wrapper = styled.div`
-    background-color: #ADCFD4;
+  background-color: #ADCFD4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 `;
 export default Navigation;

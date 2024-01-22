@@ -1,40 +1,43 @@
-.bible {
-    background-color: #FF7234;
-}
-.ongoingprayer{
+.whoIAmInChrist, .salvation{
     background-color: #EC3310;
 }
-.answertoprayer{
+.theImportanceOfTheLocalChurch, .rededication, .spiritualWarfare{
     background-color: rgb(236, 113, 133);
 }
-.salvation{
+.romans8LifeInTheSpiritIsVictory, .physicalTest5{
     background-color: #2DB3C0;
 }
-.rededication{
-    background-color:rgb(25, 162, 25); 
-}
-.referrals{
-    background-color: #00323B;
-}
-.emotionalneeds{
-    background-color: #FCD5C9;
-}
-.financialneeds{
-    background-color: purple;
-}
 
-.addiction{
-    background-color: #FFEAE4;
-}
-.genderissues{
-    background-color: rgb(169, 229, 49);
-}
-.familyconcerns{
+.faith, .physicalResource1Test, .ongoingprayer {
     background-color: #FF7234;
 }
-.physicalhealing{
+.godsPresenceToComfort, .forgiveness , .literature{
+    background-color: #2DB3C0;
+}
+.peace{
+    background-color:rgb(25, 162, 25); 
+}
+.prayerBibleReading{
+    background-color: #00323B;
+}
+.hope, .addiction{
+    background-color: #FCD5C9;
+}
+.finances, .walkoffaith{
+    background-color: purple;
+}
+.healingBodySoulSpirit, .answertoprayer{
+    background-color: #FFEAE4;
+}
+.healingPersonalizedPrayer{
+    background-color: rgb(169, 229, 49);
+}
+.familyconcerns, .emotionalNeeds {
+    background-color: #FF7234;
+}
+.healing{
     background-color: powderblue;
 }
-.abuse{
+.guidance, .churchreferrals{
     background-color: #EC3310;
 }

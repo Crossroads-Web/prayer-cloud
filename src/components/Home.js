@@ -17,6 +17,9 @@ import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import { Auth0Lock } from 'auth0-lock';
 import { organizations } from '../assets/database';
+import { useAuth0 } from '@auth0/auth0-react';
+
+
 
 const convertStringToCamelCase = (sentence) => {
     return sentence.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g,
@@ -131,7 +134,7 @@ const Home = ()  => {
     <Wrapper>
         <Navigation bg="light" expand={"lg"} className="mb-3 p-3">
           <Container fluid>
-            <Navbar.Brand href="#"><img src={require("../assets/images/logo.png")} alt="logo" width={'146'}/></Navbar.Brand>
+            {/* <Navbar.Brand href="#"><img src={require("../assets/images/logo.png")} alt="logo" width={'146'}/></Navbar.Brand> */}
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-lg`}
@@ -241,7 +244,7 @@ const Home = ()  => {
                     </WhatWeDoText>
                     <Features className='row mb-4'>
                         <Feature className="col-lg-3 col-6 pt-5">
-                            <img src={require("../assets/images/certificate.png")} alt="logo" width={'50'}/>
+                            {/* <img src={require("../assets/images/certificate.png")} alt="logo" width={'50'}/> */}
                             <FeatureText  className='pt-4'>Years of Prayer</FeatureText>
                             <PlatformNumber>
                                 {counterOn &&

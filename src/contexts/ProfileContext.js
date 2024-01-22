@@ -2,23 +2,24 @@ import React, { useState, createContext, useContext, useEffect } from "react";
 import { Fetch } from "../hooks/use-fetch-hook";
 import { OrganizationContext } from "./OrganizationContext";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
-
 export const ProfileContext = createContext(null);
 
 export const ProfileProvider = ({children}) => {
     const {organizations} = useContext(OrganizationContext);
     const [worker, setWorker] = useState(undefined);
     const [report, setReport] = useState(undefined);
-    const [showDataOption, setShowDataOption] = useState("currentMonth");
+    const [loading, setLoading] = useState(false);
+    const [showDataOption, setShowDataOption] = useState("allData");
     const [show, setShow] = useState(false);
     const [organization, setOrganization] = useState(null);
     const [organizationImage, setOrganizationImage] = useState(undefined);
-
     useEffect(() =>{
+        setLoading(true)
         if (organizations) {
             getOrganizationsReport(showDataOption)
         }
     },[organizations, worker, showDataOption, organizationImage])
+   
    
     const getOrganizationImage = (name) =>{
         const storage = getStorage();
@@ -64,10 +65,12 @@ export const ProfileProvider = ({children}) => {
     
     const handleWorker = (event) => {
         if (event.data.type === 'currentWorkerInfo') {
+            // console.log("home", event.data)
             // get phone number from the postmessage data
             setWorker(event.data.data.worker);
-          }
+        }
 
+        
     }
     window.addEventListener('message', handleWorker, false);
     const fetchReport = async(twilio_number, show_data_option) => {
@@ -87,21 +90,35 @@ export const ProfileProvider = ({children}) => {
             body: JSON.stringify(data),
         }
         const result = await Fetch(url, options);
+        setLoading(false)
         return result.data;
     }
 
     const getOrganizationsReport = async (show_data_option) => {
-        if (worker && worker.roles.includes('care_person')) { // && !worker.roles.includes('team_lead')
+        if (worker && worker.isCarePerson) { // && !worker.roles.includes('team_lead')
             var organization = organizations.find((organization) =>{
-                return organization.carePastorEmail === worker.email 
+                return organization.carePersonEmail === worker.email 
             })
             if (organization){
+                let fetchNumber = organization.assignedNumber
+                if(show_data_option === "allData"){
+                    fetchNumber = "+12897687515"
+                }
                 setOrganization(organization);
                 getOrganizationImage(organization.name);
-                const result = await fetchReport(organization.assignedNumber, show_data_option);
+                const result = await fetchReport(fetchNumber, show_data_option);
                 setReport(result);
             }
+
+            //actual condition to be used after testing is done
+            // if (organization){
+            //     setOrganization(organization);
+            //     getOrganizationImage(organization.name);
+            //     const result = await fetchReport(organization.assignedNumber, show_data_option);
+            //     setReport(result);
+            // }
         }
+        //setLoading(false)
     }
  
     const formatData = (report) => {
@@ -147,7 +164,7 @@ export const ProfileProvider = ({children}) => {
         <ProfileContext.Provider 
             value=
             {{
-                worker, getOrganizationsReport, show, handleClose, handleShow, showDataOption, setShowDataOption, organizationImage,
+                worker, getOrganizationsReport, show, handleClose, handleShow, showDataOption, setShowDataOption, organizationImage, loading,
                 report, genderData, ageRangeData, dispositionData, callTypeData, organization, digitalResourcesData, physicalResourcesData
                  
             }}

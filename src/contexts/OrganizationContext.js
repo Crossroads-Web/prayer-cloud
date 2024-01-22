@@ -81,7 +81,6 @@ export const OrganizationProvider = ({children}) => {
     const onImageChange = (event) => {
         if (event.target.files && event.target.files[0]) {
             setImage(event.target.files[0]);
-
         }
     }
 

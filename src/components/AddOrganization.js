@@ -13,7 +13,11 @@ export default function (props) {
         carePersonEmail, setCarePersonEmail, carePersonPhone, setCarePersonPhone, serviceStartTimes, setServiceStartTimes, churchPrograms, setChurchPrograms
     } = useContext(OrganizationContext);
 
-
+/*
+THIS COMPONENET IS HOME FOR THE ADD ORGANIZATION FUNCTTIONALITY
+A pop up modal that contais important info for organizations to be created
+On Add organization clicked the func (OrgainzationContext) validates and stores the organization in firebase on success
+*/
   return (
     <>
       {/* <ButtonWrapper onClick={props.handleShow}>

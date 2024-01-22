@@ -7,51 +7,86 @@ import ErrorPage from './ErrorPage';
 import { BsImage } from "react-icons/bs";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
 import { Bar, Doughnut } from 'react-chartjs-2';
+import Spinner from 'react-bootstrap/Spinner';
 
 
 ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale, BarElement);
 
  const Profile = () =>{
 
-    const { organizationImage, genderData, ageRangeData, dispositionData, callTypeData, setShowDataOption, showDataOption,
+    const { organizationImage, genderData, ageRangeData, dispositionData, callTypeData, setShowDataOption, showDataOption, loading,
       show, handleClose, handleShow, organization, report, digitalResourcesData, physicalResourcesData }  = useContext(ProfileContext);
     
+      console.log(loading)
     // useEffect(()=>{
     //   getOrganizationsReport(showDataOption)
     // },[worker, showDataOption] )
 
   return (
-    <Wrapper>
-          <Buttons className='m-1'>
-            {report && report[0].total_calls > 0 &&
-              <RightButtons>
+    <Wrapper className='row mt-5 pt-3'>
+          <Buttons className='m-1 '>
+            <RightButtons>
               {showDataOption === "currentMonth" ? <DisabledButton className="m-1 p-1" disabled>Showing monthly data </DisabledButton> : <ActiveButton className="m-1 p-1" onClick={() =>setShowDataOption("currentMonth")}> Show monthly data </ActiveButton>} 
               {showDataOption  === "currentMonth" ? <ActiveButton className="m-1 p-1" onClick={() => setShowDataOption("allData")}>Show all data</ActiveButton> : <DisabledButton className="m-1 p-1" disabled>Showing all data</DisabledButton>}
-              </RightButtons> 
-            }
-          <LeftButtons>
-            {
-              organization && 
-              <ActiveButton className="m-1 p-1" onClick={handleShow} style={{backgroundColor: "#3A8E9A"}}>
-                View Profile
-              </ActiveButton>
-            }
-          </LeftButtons>
+            </RightButtons> 
+
+            <LeftButtons>
+              {
+                organization && 
+                <ActiveButton className="m-1 p-1" onClick={handleShow} style={{backgroundColor: "#3A8E9A"}}>
+                  View Profile
+                </ActiveButton>
+              }
+            </LeftButtons>
       </Buttons>
-      {report && report[0].total_calls > 0 ? 
-      
+      {loading ? 
+      //loading spinner
+      <div class="d-flex justify-content-center" style={{width: "100vw", height: "100vh"}} >
+        <div class="spinner-border" role="status" style={{width: "6em", height: "6em"}}>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div> :
+        report && report[0].total_calls > 0 ? 
       <> 
+      <div className='row'>
         <CardContainer className='row m-5' >
-          <DarkCard className='col-xl-4 col-md-5 p-2'>
+          <DarkCard className='col-md-7 col-sm-10  p-2'>
             <DarkCardValue>
               {(report[0].total_calls).toLocaleString("en-US")}
               
             </DarkCardValue>
-            <DarkCardLabel>total calls this month</DarkCardLabel>
+            <DarkCardLabel>total calls received</DarkCardLabel>
           </DarkCard>
         </CardContainer>
+        </div>
           <Charts className="row m-1">
-            <div className='col-md-5 col-sm-12 '>
+            <div className='col-md-6 col-sm-12 p-2'>
+              <Doughnut data={dispositionData} 
+              options={{
+                maintainAspectRatio: false,
+                plugins: {
+                  title: {
+                    display: true,
+                    text: "Disposition of Calls",
+                    position: 'top',
+                    font:{
+                      size: 16
+                    }
+                  },
+                  legend: {
+                    position: 'right',
+                    labels: {
+                        // This more specific font property overrides the global property
+                        font: {
+                            size: 12
+                        }
+                    }
+                  },
+                }
+              }}
+              /> 
+            </div>
+            <div className='col-md-6 col-sm-12'>
               <Doughnut data={genderData}  
               options={{
                 plugins: {
@@ -65,9 +100,7 @@ ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale,
                   },
                   legend: {
                     position: 'right',
-                    labels: {
-                      
-                        // This more specific font property overrides the global property
+                    labels: {    
                         font: {
                             size: 12
                         }
@@ -77,37 +110,15 @@ ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale,
               }}
             />
             </div>
-
-          <div className='col-md-5 col-sm-12 p-2'>
-            <Doughnut data={dispositionData} 
-            options={{
-              plugins: {
-                title: {
-                  display: true,
-                  text: "Disposition of Calls",
-                  position: 'top',
-                  font:{
-                    size: 16
-                  }
-                },
-                legend: {
-                  position: 'right',
-                  labels: {
-                    
-                      // This more specific font property overrides the global property
-                      font: {
-                          size: 12
-                      }
-                  }
-                },
-              }
-            }}
-            /> 
-          </div>
-          {/* <Doughnut data={dispositionData} />  
-          <Bar data={callTypeData} />   */}
           </Charts>
           <Charts className="row m-3">
+            <div className='col-lg-7 col-md-10 col-sm-12 p-4' style={{position: "relative",}} >
+            <Bar className='col' data={ageRangeData}  options={{
+              plugins: {
+                maintainAspectRatio: false,
+              }
+            }}/>
+            </div>
             <CardContainer className='col-md-4 col-sm-10 '>
               <LightCard className='col-xl-4 col-md-5 p-2'>
                 <LightCardValue>
@@ -117,19 +128,15 @@ ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale,
                 <LightCardLabel>total call duration</LightCardLabel>
               </LightCard>
             </CardContainer>
-            <div className='col-md-6 col-sm-12 p-4' style={{position: "relative",}} >
-            <Bar className='col' data={callTypeData}  options={{
-              plugins: {
-                responsive: true,
-              }
-            }}/>
-            </div>
-
           </Charts>
 
           <Charts className="row m-3">
-            <div className='col-md-6 col-sm-12 p-4'>
-              <Bar className='col' data={ageRangeData} />
+            <div className='col-lg-7 col-md-10 col-sm-12 p-4' style={{alignItems: "center"}}>
+              <Bar className='col' data={callTypeData}  options={{
+              plugins: {
+                maintainAspectRatio: false,
+              }
+            }}/>
             </div>
             <CardContainer className='col-md-4 col-sm-10'>
               <LightCard className='p-2'>
@@ -145,9 +152,10 @@ ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale,
           </Charts>
 
           <Charts className="row m-1">
-            <div className='col-md-5 col-sm-12 '>
-              <Doughnut data={digitalResourcesData}  
+            <div className='col-md-6 col-sm-12 '>
+              <Doughnut data={digitalResourcesData} 
               options={{
+                maintainAspectRatio: false,
                 plugins: {
                   title: {
                     display: true,
@@ -172,7 +180,7 @@ ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale,
             />
             </div>
 
-          <div className='col-md-5 col-sm-12 p-2'>
+          <div className='col-md-6 col-sm-12'>
             <Doughnut data={physicalResourcesData} 
             options={{
               plugins: {
@@ -202,7 +210,7 @@ ChartJS.register(ArcElement, Tooltip, Title, Legend, CategoryScale, LinearScale,
           <Bar data={callTypeData} />   */}
           </Charts>
       </>
-        :
+        : 
         <ErrorPage errorMessage="No available reports" />
       }
       {
@@ -384,7 +392,7 @@ const DisabledButton = styled.button`
 `;
 
 const LeftButtons = styled.div`
-
+  margin-right: 0.5em !important;
 `;
 
 const ChurchImage = styled.div`
@@ -416,7 +424,7 @@ const PersonInfo = styled.div`
 `;
 
 const PersonInfoHeader = styled.h4`
-text-align: left;
+  text-align: left;
     color: #2DB3C0;
     font-family: Recoleta;
     text-decoration: underline;
@@ -424,8 +432,11 @@ text-align: left;
 
 const Charts = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 `;
 

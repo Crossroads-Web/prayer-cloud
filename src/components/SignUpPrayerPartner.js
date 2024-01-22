@@ -13,7 +13,6 @@ export default function SignUpPrayerPartner(props) {
         }
     },[props.showLock])
     const {organizations} = useContext(OrganizationContext);
-
     const handleSignUp = () =>{
         // e.preventDefault();
         lock.show();
@@ -49,12 +48,12 @@ export default function SignUpPrayerPartner(props) {
                 };
             }
         },
-        
+        //if organizations is defe=ined and not empty
         {
             type: "select",
             name: "organization_name",
             placeholder: "Select Organization Name",
-            options: organizations ? 
+            options: organizations && organizations.length ? 
                 organizations.map((organization, i) => {
                     return (
                         {
@@ -63,7 +62,7 @@ export default function SignUpPrayerPartner(props) {
                         }
                     ) 
                 })
-            : [{value:"crossroads", label: "crossroads"}]
+            : [{value:"crossroads", label: "Crossroads"}]
         },
         {
             type: "select",
@@ -73,7 +72,7 @@ export default function SignUpPrayerPartner(props) {
                 {value: "agent", label: "Agent"},
                 {value: "supervisor, wfo.team_leader", label: "Team Leader"},
                 {value: "supervisor", label: "Supervisor"},
-                {value: "agent, care_person", label: "Care Person"}
+                {value: "agent, care_person", label: "Subscriber"}
             // {value: "[administrator]", label: "Administrator"},
             ],
 
@@ -87,7 +86,7 @@ export default function SignUpPrayerPartner(props) {
                 {value: "Pastoral Care", label: "Pastoral Care"},
                 {value: "Suicide Prevention", label: "Suicide Prevention"},
                 {value: "Pastoral Care, Suicide Prevention", label: "Pastoral Care + Suicide Prevention"},
-                {value: "None", label: "None"},
+                {value: "Subscriber", label: "Subscriber"},
             ],
         },
         // {

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const ModelPrayers = () => {
   
   return (
-    <Wrapper className='model-prayers'>
+    <Wrapper className='row mb-5 mt-5 model-prayers'>
         <Header className="p-2 mt-4">Model Prayers</Header>
         <div className="mb-5 p-1">
             <Lead className="p-4">This is the confidence we have in approaching God: that if we ask anything according to his will, he hears us. ~ 1 John 5:14, NIV </Lead>
@@ -78,15 +78,14 @@ const ModelPrayers = () => {
 
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘God’s Will’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Faith and Guidance Brochures</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -130,15 +129,14 @@ const ModelPrayers = () => {
 
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘emotions’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Emotional Needs, Hope and Peace Brochures</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -185,15 +183,14 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘finances’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Finances and Faith Brochures</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -246,15 +243,14 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘healing’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Healing Body, Spirit, Soul and Faith Brochures</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -317,15 +313,14 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘salvation’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Faith Brochure</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -394,15 +389,14 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘marriage’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Faith and Peace Brochure</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -456,15 +450,14 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘prodigal’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
                         Offer the <Redish>Faith Brochure</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -525,9 +518,8 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>spiritual warfare</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li>
                     Book Suggestion: <Redish>Soul Care by Dr. Rob Reimer</Redish> <Blueish>(featured on 100huntley.com)</Blueish>
@@ -536,7 +528,7 @@ const ModelPrayers = () => {
                         Offer the <Redish>Faith Brochure</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>
@@ -606,15 +598,14 @@ const ModelPrayers = () => {
                 <h6><Redish>Resource Suggestions</Redish></h6>
                 <ol>
                     <li>
-                        Encourage callers to visit the Crossroads multi-channel internet site at <Redish><a href="https://www.100huntley.com" style={{color: "#EC3310"}}>www.100huntley.com</a></Redish>
-                        <Blueish> (Caller Instructions: Type the word </Blueish> <Redish>‘suicide’</Redish> <Blueish>in the Search box at the top of the Home Page and press enter.
-                        This allows the caller to view videos and explore the Topical, Scripture and Resource options.)</Blueish>
+                        Encourage callers to visit the 100 Huntley Street Resources & Topic Index video library at:  <Redish><a href="http://100hs.ca/topic" target="_blank" style={{color: "#EC3310"}}>http://100hs.ca/topic</a></Redish> or our Crossroads website at 
+                        <Redish> <a href="www.crossroads.ca" target="_blank" style={{color: "#EC3310"}}>www.crossroads.ca</a></Redish>
                     </li>
                     <li> 
-                        Offer the <Redish>Hope, Peace, and Emotional Needs Brochured</Redish> to callers who ask for the mail option.
+                        Offer the <Redish>Hope, Peace, and Emotional Needs Brochures</Redish> to callers who ask for the mail option.
                     </li>
                     <li>
-                        See the <Redish>“Bible Materials”</Redish> list for other suggestions
+                        See the <Redish>“Resources”</Redish> list for other suggestions (in Resource Binder).
                     </li>
                 </ol>
             </Accordion.Body>

@@ -8,6 +8,7 @@ import { OrganizationProvider } from './contexts/OrganizationContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './js/firebase';
 import { PastoralProvider } from './contexts/PastoralContext';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -16,7 +17,9 @@ root.render(
     <ProfileProvider>
       <CallFormProvider>  
         <PastoralProvider>
-         <App />
+          <BrowserRouter>
+            <App /> 
+          </BrowserRouter> 
         </PastoralProvider>
       </CallFormProvider>
     </ProfileProvider>
